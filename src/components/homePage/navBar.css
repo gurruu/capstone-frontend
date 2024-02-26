@@ -1,0 +1,30 @@
+.navbar {
+  background-color: #333; /* Navbar background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding for the navbar */
+  display: flex; /* Make the navbar flex container */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Font size for the company name */
+  color: #fff; /* Company name color */
+}
+
+.navbar-item {
+  margin-right: 10px; /* Margin between navbar items */
+}
+
+.button {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  padding: 8px 16px; /* Padding for the button */
+  font-size: 1rem; /* Button font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
