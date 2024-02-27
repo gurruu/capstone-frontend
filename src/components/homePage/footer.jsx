@@ -82,7 +82,7 @@ const Footer = () => {
     <footer>
       <div className="footer-section">
         {/* Product Links */}
-        <div>
+        <div className="line1">
           <h3>Product</h3>
           <ul>
             <li>

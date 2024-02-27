@@ -65,7 +65,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
-import "./accordion.css"; // You can define your CSS styles for the accordion component
+import "./accordion.css"; 
 
 const Accordion = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(null);

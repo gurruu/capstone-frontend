@@ -1,3 +1,6 @@
+body,html{
+  margin: 0;
+}
 .navbar {
   background-color: #333; /* Navbar background color */
   color: #fff; /* Text color */
@@ -5,6 +8,7 @@
   display: flex; /* Make the navbar flex container */
   justify-content: space-between; /* Space between items */
   align-items: center; /* Center items vertically */
+  padding: 30px;
 }
 
 .navbar-brand {
@@ -23,6 +27,7 @@
   padding: 8px 16px; /* Padding for the button */
   font-size: 1rem; /* Button font size */
   cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 10%;
 }
 
 .button:hover {

@@ -29,7 +29,12 @@ a {
 a:hover {
   color: #ffc107; /* Link text color on hover */
 }
-
+.line1{
+  margin-left: 100px;
+}
+.copyright{
+  text-align: center;
+}
 .footer-section {
   display: flex; /* Use flexbox layout */
   justify-content: space-between; /* Space evenly between sections */
