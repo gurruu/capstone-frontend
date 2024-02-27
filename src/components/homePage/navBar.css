@@ -3,17 +3,18 @@ body,html{
 }
 .navbar {
   background-color: #333; /* Navbar background color */
-  color: #fff; /* Text color */
+  color: #120101; /* Text color */
   padding: 10px 20px; /* Padding for the navbar */
   display: flex; /* Make the navbar flex container */
   justify-content: space-between; /* Space between items */
   align-items: center; /* Center items vertically */
   padding: 30px;
+  
 }
 
 .navbar-brand {
   font-size: 1.5rem; /* Font size for the company name */
-  color: #fff; /* Company name color */
+  color: #130000; /* Company name color */
 }
 
 .navbar-item {

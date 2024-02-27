@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./SignUp.css";
 import image from "../../assets/patternImg.f93bd17c.svg";
-import HomeIcon from '@mui/icons-material/Home';
+import { Link } from "react-router-dom";
+ 
 
-export default function Login() {
+export default function SignUp() {
   const [currValue, setCurrValue] = useState({
     firstname: "",
     lastname: "",
@@ -90,7 +91,7 @@ export default function Login() {
               <input
                 type="email"
                 id="email"
-                placeholder="email"
+                placeholder="Email"
                 name="email"
                 onChange={changeHandler}
                 value={currValue.email}
@@ -152,7 +153,7 @@ export default function Login() {
           </form>
         </div>
         <p>
-          Already have account? <a href="">Click Here</a>
+          Already have account? <Link className="link-text" to="/login"> Click Here</Link>
         </p>
       </div>
     </div>
