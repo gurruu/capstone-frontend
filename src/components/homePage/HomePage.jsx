@@ -35,12 +35,12 @@ const items = [
 
 export default function HomePage() {
   return (
-    <>
+    <div className="home-page">
       <Navbar></Navbar>
       <Cardbox />
       <h1 className="frequently">Frequently Asked Questions</h1>
       <Accordion items={items} />
       <Footer></Footer>
-    </>
+    </div>
   );
 }

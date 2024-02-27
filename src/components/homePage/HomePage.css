@@ -2,3 +2,17 @@
     text-align: center;
     font-size: 30 px;
 }
+.home-page {
+    background-image: url('./rupixen.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Set the height of the background to fill the entire viewport */
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
+  
+  
+  
+  
+  
+  
+
