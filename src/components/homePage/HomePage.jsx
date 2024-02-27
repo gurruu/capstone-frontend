@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./navBar.jsx";
 import Footer from "./footer.jsx";
-
+import Cardbox from "../card/cardbox.jsx";
 import Accordion from "./accordion.jsx";
 import "./HomePage.css";
 
@@ -37,7 +37,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar></Navbar>
-
+      <Cardbox />
       <h1 className="frequently">Frequently Asked Questions</h1>
       <Accordion items={items} />
       <Footer></Footer>
