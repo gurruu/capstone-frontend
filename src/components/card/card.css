@@ -1,28 +1,54 @@
-/* styles.css */
 
-/* CardContainer styles */
 .card-container {
-    position: relative;
-    width: 350px; /* Adjust width as needed */
-    height: 250px; /* Adjust height as needed */
-    overflow: hidden;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 30px;
-    margin-left: 100px;
-    display:inline-block;
-    /* justify-content: center;
-    display: flex; */
+  position: relative;
+  width: 350px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: inline-block;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.card-container:nth-child(odd) {
+  animation-name: slideInLeft;
+}
+
+.card-container:nth-child(even) {
+  animation-name: slideInRight;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.card-container:hover .card-image {
+  opacity: 0.3;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  
-  .card-image {
-    width: 100%;
-    height: 100%;
-    z-index:0;
-  
-   
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .card-container:hover .card-image {
-    opacity: 0.3;;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
   }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
