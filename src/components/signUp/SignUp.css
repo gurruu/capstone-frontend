@@ -135,3 +135,23 @@ input:focus {
 .link-text{
     color: blue;
 }
+
+.under-line{
+    /* width: inherit; */
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    /* border-bottom: 1px solid rgb(196, 176, 176); */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+.under-line p{
+    /* width: 30%; */
+    /* background-color: red; */
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2px;
+}

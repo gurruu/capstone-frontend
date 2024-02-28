@@ -3,8 +3,9 @@ import "./Login.css";
 import image from "../../assets/patternImg.f93bd17c.svg";
 import HomeIcon from '@mui/icons-material/Home';
 import { Link } from "react-router-dom";
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 
-export default function SignUp() {
+export default function Login() {
   const [currValue, setCurrValue] = useState({
     email: "",
     password: "",
@@ -84,6 +85,21 @@ export default function SignUp() {
             </div>
           </form>
         </div>
+        <div className="under-line">
+          <p>Or</p>
+          <GoogleOAuthProvider  clientId="1006719320012-bpprguisgq6oq9o716i7lrd14s1ol0dr.apps.googleusercontent.com">
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              console.log(credentialResponse);
+            }}
+            onError={() => {
+              console.log("Login Failed")
+            }}
+          />
+          
+        </GoogleOAuthProvider>
+        </div>
+        
         <p>
           Don't have account? <Link className="link-text" to="/signin"> Click Here</Link>
         </p>
