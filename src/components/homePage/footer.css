@@ -75,10 +75,11 @@ a:hover {
 
 /* Copyright section */
 /* .footer-section > */
- .copyright {
-  width: 100%; /* Full width for copyright section */
+.copyright {
+  /* width: 100%; Full width for copyright section */
   margin-right: 10px;
-  /* text-align: center; Align text to the center */
+  margin-left: 38%;
+  text-align: center; 
   position: absolute; /* Position at the bottom */
   bottom: 20px; /* Distance from the bottom */
   font-size: 11px; /* Smaller font size */
