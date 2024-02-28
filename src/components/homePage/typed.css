@@ -1,0 +1,20 @@
+
+  .hero{
+    font-size: 50px;
+    text-align: center;
+    
+  }
+
+
+  .heading{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    display: flexbox;
+    align-items: center;
+    padding: auto;
+    line-height: 1.2;
+    margin-top: 5%;
+    min-height: 30vh;
+    white-space: pre-line;
+  }

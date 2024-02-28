@@ -6,9 +6,36 @@ footer {
   position: relative; /* Position footer container */
 }
 
+
+/* Social Icons Container */
+.social-icons {
+  margin-top: 10px;
+  margin-left: 530px;
+  margin-bottom: 20px;
+  display: flex; /* Align icons horizontally */
+}
+
+/* Social Icon Link */
+.social-icons a {
+  display: inline-block; /* Make the links behave like blocks */
+  margin-right: 10px; /* Add spacing between icons */
+  color: #daebea; /* Set icon color */
+  font-size: 24px; /* Set icon size */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.25s ease; /* Smooth transition on hover */
+}
+
+/* Social Icon Link Hover */
+.social-icons a:hover {
+  color: #cfd445; /* Change color on hover */
+}
+
+
+
+
 h3 {
   margin-bottom: 20px; /* Bottom margin for headings */
-  font-size: 18px; /* Font size for headings */
+  font-size: 17px; /* Font size for headings */
 }
 
 ul {
@@ -18,6 +45,7 @@ ul {
 
 li {
   margin-bottom: 10px; /* Bottom margin for list items */
+  font-size: 13px;
 }
 
 a {
@@ -46,12 +74,15 @@ a:hover {
 }
 
 /* Copyright section */
-.footer-section > .copyright {
+/* .footer-section > */
+ .copyright {
   width: 100%; /* Full width for copyright section */
-  text-align: center; /* Align text to the center */
+  margin-right: 10px;
+  /* text-align: center; Align text to the center */
   position: absolute; /* Position at the bottom */
   bottom: 20px; /* Distance from the bottom */
-  font-size: 14px; /* Smaller font size */
+  font-size: 11px; /* Smaller font size */
+  
 }
 
 /* Responsive adjustments for small screens */
@@ -61,3 +92,4 @@ a:hover {
     margin-bottom: 30px; /* Bottom margin for spacing */
   }
 }
+

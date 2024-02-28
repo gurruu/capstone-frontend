@@ -4,12 +4,16 @@
 }
 .home-page {
     background-image: url('./rupixen.jpg');
+    margin: 0;
+    width: 100%;
+    padding-right: -10% !important;
     background-size: cover;
     background-position: center;
     height: 100vh; /* Set the height of the background to fill the entire viewport */
     overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: auto;
   }
-  
+
   
   
   

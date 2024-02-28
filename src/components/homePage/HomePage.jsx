@@ -3,6 +3,7 @@ import Navbar from "./navBar.jsx";
 import Footer from "./footer.jsx";
 import Cardbox from "../card/cardbox.jsx";
 import Accordion from "./accordion.jsx";
+import Typed from "./typed.jsx";
 import "./HomePage.css";
 
 const items = [
@@ -37,6 +38,7 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <Navbar></Navbar>
+      <Typed></Typed>
       <Cardbox />
       <h1 className="frequently">Frequently Asked Questions</h1>
       <Accordion items={items} />
