@@ -10,6 +10,11 @@ const Navbar = () => {
           Company
         </Link>
       </div>
+      <div className="navbar-brand">
+        <Link to="/dashboard" className="navbar-item">
+          DashBoard
+        </Link>
+      </div>
       <div className="navbar-end">
         <div className="navbar-item">
           <Link to="/signin" className="button is-primary">

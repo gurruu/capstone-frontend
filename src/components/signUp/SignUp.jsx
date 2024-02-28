@@ -57,7 +57,7 @@ export default function SignUp() {
         </div>
       </div>
       <div className="right-container">
-        <h3 className="heading">Welcome to Capstone</h3>
+        <h3 className="heading-login-page">Welcome to Capstone</h3>
         <div className="input-container">
           <form onSubmit={submitHandler}>
             <div className="name-container">
