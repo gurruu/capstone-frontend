@@ -10,6 +10,7 @@ const Navbar = () => {
           Investo
         </Link>
       </div>
+      
       <div className="navbar-brand">
         <Link to="/dashboard" className="navbar-item">
           DashBoard

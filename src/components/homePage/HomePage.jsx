@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "./navBar.jsx";
 import Footer from "./footer.jsx";
-import Cardbox from "../card/cardbox.jsx";
+// import Cardbox from "../card/cardbox.jsx";
+import Cardbox from "../ncard/cardbox.jsx";
 import Accordion from "./accordion.jsx";
 import Typed from "./typed.jsx";
 import Canus from "./canus.jsx";

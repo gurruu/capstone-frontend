@@ -14,7 +14,7 @@ body,html{
   display: flex; /* Make the navbar flex container */
   justify-content: space-between; /* Space between items */
   align-items: center; /* Center items vertically */
-  padding: 10px;
+  /* padding: 10px; */
   width: 97%;
   position: fixed;
   z-index: 3;
@@ -33,7 +33,7 @@ body,html{
     color: #e8ecf1;
     
     font-family: Inter,sans-serif;
-    font-size: 21px;
+    font-size: 20px;
     padding: 8px;
     padding-left: 40px;
     padding-right: 40px;
@@ -50,7 +50,10 @@ body,html{
 
 
 .navbar-brand {
+  
+  font-family: Inter,sans-serif;
   font-size: 1.5rem; /* Font size for the company name */
+  font-size: 20px;
   color: #5c977c; /* Company name color */
   color: #5c977c; /* Updated company text color */
 }

@@ -1,0 +1,21 @@
+
+.card-container {
+    background-color:#f3f2f3;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* width: 180px; */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container > div {
+    flex: 1;
+    margin: 10px;
+  }
