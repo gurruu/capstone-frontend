@@ -14,7 +14,7 @@ body,html{
   display: flex; /* Make the navbar flex container */
   justify-content: space-between; /* Space between items */
   align-items: center; /* Center items vertically */
-  padding: 30px;
+  padding: 10px;
   width: 97%;
   position: fixed;
   z-index: 3;
@@ -22,6 +22,32 @@ body,html{
   /* width: 100%; */
   
 }
+
+.tab__bJxhD {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    border-radius: 40px;
+    color: #e8ecf1;
+    
+    font-family: Inter,sans-serif;
+    font-size: 21px;
+    padding: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+    transition: .8s;
+    white-space: nowrap
+}
+
+.tab__bJxhD:hover {
+    background: #459a7a;
+    transition: 0.5s;
+    color: #120101;
+    
+}
+
 
 .navbar-brand {
   font-size: 1.5rem; /* Font size for the company name */
@@ -35,15 +61,21 @@ body,html{
 }
 
 .button {
-  background-color: #db0000; /* Button background color */
-  color: #fff; /* Button text color */
-  border: none; /* Remove button border */
-  padding: 8px 16px; /* Padding for the button */
-  font-size: 0.9rem; /* Button font size */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  border-radius: 10%;
+  background-color: #eef5f2; /* Button background color */
+  color: #160457; /* Button text color */
+  border: 2px; /* Remove button border */
+  padding: 10px 35px; /* Padding for the button */
+  font-size: 16px; /* Button font size */
+  cursor: pointer;        /* Change cursor to pointer on hover */
+  border-radius: 15px;
+  font-weight: bold;
+  
+  transition: background-color 0.3s, color 0.3s;
+ 
+  
 }
 
 .button:hover {
-  background-color: #840303; /* Button background color on hover */
+  background-color: #459a7a; 
+  color:white/* Button background color on hover */
 }
