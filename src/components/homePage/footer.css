@@ -10,7 +10,7 @@ footer {
 /* Social Icons Container */
 .social-icons {
   margin-top: 10px;
-  margin-left: 530px;
+  margin-left: 500px;
   margin-bottom: 20px;
   display: flex; /* Align icons horizontally */
 }
@@ -78,7 +78,7 @@ a:hover {
 .copyright {
   /* width: 100%; Full width for copyright section */
   margin-right: 10px;
-  margin-left: 38%;
+  margin-left: 40%;
   text-align: center; 
   position: absolute; /* Position at the bottom */
   bottom: 20px; /* Distance from the bottom */

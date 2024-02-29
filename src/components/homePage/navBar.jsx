@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="navbar-item">
           <Link to="/signin" className="button is-primary">
-            Sign in
+            Sign In
           </Link>
         </div>
       </div>

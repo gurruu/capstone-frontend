@@ -10,16 +10,17 @@ const Typed = () => {
   ];
 
   return (
-    <div className="heading">
+    <div className="heroo">
       <ReactTyped className="hero"
         strings={textLines}
-        typeSpeed={100}
+        typeSpeed={50}
         loop
         backSpeed={20}
-        cursorChar=">"
+        cursorChar="|"
         showCursor={false}
         style={{ fontSize: "60px", display: "block" }}
       />
+      {/* <div className="permanent-line">Your permanent line here</div> */}
     </div>
   );
 };

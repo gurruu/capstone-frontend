@@ -1,19 +1,27 @@
 
   .hero{
     font-size: 50px;
-    text-align: center;
-    
+    text-align: left;
+    font-style: oblique;
+    font-size: larger;
+    margin-left: 17%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
   }
+  .permanent-line {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  
 
-
-  .heading{
+  .heroo{
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: auto;
     display: flexbox;
     align-items: center;
     padding: auto;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-top: 5%;
     min-height: 30vh;
     white-space: pre-line;
