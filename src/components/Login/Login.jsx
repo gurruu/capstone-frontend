@@ -33,6 +33,7 @@ export default function Login() {
         return
     }
     setIsFormDataValid(true)
+    console.log("hi from login")
     console.log(currValue);
     setCurrValue({
     email: "",
@@ -42,21 +43,13 @@ export default function Login() {
   };
 
   return (
-    <div className="main-container">
-      <div className="left-container">
-        <img className="image-container" src={image} alt="" />
-        <div className="img-text">
-          <p>Hey! Start Investing for free.</p>
-        </div>
-      </div>
-      <div className="right-container">
-        <h3 className="heading-login-page">Welcome to Capstone</h3>
-        <div className="input-container">
-          <form onSubmit={submitHandler}>
-            
-            <div className="input email ">
-              
-              <input
+    <div className="box-size-login">
+      <div className="main-log-container">
+      <div className="wrapper-login">
+    <form onSubmit={submitHandler}>
+      <h1>Login</h1>
+      <div className="input-box-login">
+      <input
                 type="email"
                 id="email"
                 placeholder="Email"
@@ -65,9 +58,10 @@ export default function Login() {
                 value={currValue.email}
                 required
               />
-            </div>
-            <div className="input password">
-              <input
+        <i className='bx bxs-user'></i>
+      </div>
+      <div className="input-box-login">
+      <input
                 type="password"
                 id="password"
                 placeholder="Password"
@@ -77,18 +71,27 @@ export default function Login() {
                 required
                 minLength={8}
               />
-              {!isFormDataValid && <p className="error-class">Password must consist a lowercase,uppercase, special character and a digit.</p>}
-            </div>
-           
-            <div className="button-container">
-              <button className="submit">Login</button>
-            </div>
-          </form>
-        </div>
-        <div className="under-line">
-          <p>Or</p>
-          <GoogleOAuthProvider  clientId="1006719320012-bpprguisgq6oq9o716i7lrd14s1ol0dr.apps.googleusercontent.com">
-          <GoogleLogin
+              {!isFormDataValid && (
+                <p className="error-class">
+                  Password must consist a lowercase,uppercase, special character
+                  and a digit.
+                </p>
+              )}
+        <i className='bx bxs-lock-alt' ></i>
+      </div>
+      <div className="remember-forgot-login">
+        <label><input type="checkbox" />Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      <Link to='/dashboard'><button type="submit" className="btn-login"> Login</button></Link>
+      <div className="register-link-login">
+        <p>Don't have an account? <Link to="/signin"> Sign Up</Link></p>
+      </div>
+    </form>
+    <div className="under-line-login">
+    <p>Or</p>
+    <GoogleOAuthProvider  clientId="1006719320012-bpprguisgq6oq9o716i7lrd14s1ol0dr.apps.googleusercontent.com">
+           <GoogleLogin
             onSuccess={(credentialResponse) => {
               console.log(credentialResponse);
             }}
@@ -98,12 +101,11 @@ export default function Login() {
           />
           
         </GoogleOAuthProvider>
-        </div>
-        
-        <p>
-          Don't have account? <Link className="link-text" to="/signin"> Click Here</Link>
-        </p>
-      </div>
+    </div>
+    
+   
+  </div>
+    </div>
     </div>
   );
 }
