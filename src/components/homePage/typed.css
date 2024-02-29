@@ -162,5 +162,33 @@
 
 
 
+@keyframes colorChange {
+  0% {
+    color: #5c977c; /* Initial color */
+  }
+  50% {
+    color: #a8a925; /* Yellow color */
+  }
+  100% {
+    color: #459a7a; /* Final color */
+  }
+}
+
+.investo-text {
+  animation: colorChange 3s infinite alternate; /* Apply animation */
+}
+
+
+.investo-text {
+  color: #5c977c; /* Color for Investo */
+  display: inline; /* Ensure it appears in the same line */
+  font-size: 74px;
+}
+
+.empowering-text {
+  color: #000000; /* Color for Empowering Your Financial Future */
+  display: inline; /* Ensure it appears in the same line */
+}
+
 
 

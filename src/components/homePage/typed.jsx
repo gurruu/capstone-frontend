@@ -73,7 +73,7 @@ const Typed = () => {
   return (
     <div className="hero-section" style={{ backgroundColor: "#f3f2f3" }}>
       <h1 className="hero-title">
-        <span className="hero-highlight" style={{ color: "#5c977c" }}>Investo: <span style={{ color: "#000000" }}>Empowering</span> </span><br />
+        <span className="hero-highlight" style={{ color: "#5c977c" }}><div className="investo-text">Investo:</div><span className="empowering-text" style={{ color: "#000000" }}>Empowering</span> </span><br />
         <span className="hero-secondary-title" style={{ color: "#000" }}>Your Financial Future</span>
       </h1>
       <p className="hero-description">
