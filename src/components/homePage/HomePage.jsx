@@ -4,6 +4,7 @@ import Footer from "./footer.jsx";
 import Cardbox from "../card/cardbox.jsx";
 import Accordion from "./accordion.jsx";
 import Typed from "./typed.jsx";
+import Canus from "./canus.jsx";
 import "./HomePage.css";
 
 const items = [
@@ -43,6 +44,7 @@ export default function HomePage() {
       <Cardbox />
       <h1 className="frequently">Frequently Asked Questions</h1>
       <Accordion items={items} />
+      <Canus></Canus>
       <Footer></Footer>
     </div>
   );
