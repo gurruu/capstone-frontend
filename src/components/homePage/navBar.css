@@ -6,15 +6,18 @@ body,html{
 }
 .navbar {
   /* background-color: #333; Navbar background color */
-  background-color: rgb(27, 1, 1);
-  color: #120101; /* Text color */
+  background-color:#192c25 ;
+  color: #000000; /* Text color */
   padding: 10px 20px; /* Padding for the navbar */
   /* //background: transparent; */
-  opacity: 0.7;
+  /* opacity: 0.7; */
   display: flex; /* Make the navbar flex container */
   justify-content: space-between; /* Space between items */
   align-items: center; /* Center items vertically */
   padding: 30px;
+  width: 97%;
+  position: fixed;
+  z-index: 3;
   /* width:100vw; */
   /* width: 100%; */
   
@@ -22,7 +25,8 @@ body,html{
 
 .navbar-brand {
   font-size: 1.5rem; /* Font size for the company name */
-  color: #130000; /* Company name color */
+  color: #5c977c; /* Company name color */
+  color: #5c977c; /* Updated company text color */
 }
 
 .navbar-item {

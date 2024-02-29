@@ -39,6 +39,7 @@ export default function HomePage() {
     <div className="home-page">
       <Navbar></Navbar>
       <Typed></Typed>
+      
       <Cardbox />
       <h1 className="frequently">Frequently Asked Questions</h1>
       <Accordion items={items} />

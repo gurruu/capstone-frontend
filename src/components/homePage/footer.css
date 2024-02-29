@@ -1,5 +1,5 @@
 footer {
-  background-color: #333; /* Footer background color */
+  background-color:#182c25 ;/* Footer background color */
   color: #fff; /* Text color */
   padding: 40px 20px; /* Padding for the footer */
   font-family: Arial, sans-serif; /* Font family */
@@ -10,7 +10,7 @@ footer {
 /* Social Icons Container */
 .social-icons {
   margin-top: 10px;
-  margin-left: 500px;
+  margin-left: 580px;
   margin-bottom: 20px;
   display: flex; /* Align icons horizontally */
 }
@@ -23,14 +23,14 @@ footer {
   font-size: 24px; /* Set icon size */
   text-decoration: none; /* Remove underline */
   transition: color 0.25s ease; /* Smooth transition on hover */
+  
 }
 
 /* Social Icon Link Hover */
-.social-icons a:hover {
+
+.social-icons-great:hover {
   color: #cfd445; /* Change color on hover */
 }
-
-
 
 
 h3 {
@@ -46,17 +46,17 @@ ul {
 li {
   margin-bottom: 10px; /* Bottom margin for list items */
   font-size: 13px;
+  
 }
-
+Link:hover{
+  color: #cfd445!important;
+}
 a {
   color: #fff; /* Link text color */
   text-decoration: none; /* Remove underline */
   transition: color 0.3s; /* Smooth transition for color change */
 }
 
-a:hover {
-  color: #ffc107; /* Link text color on hover */
-}
 .line1{
   margin-left: 100px;
 }
