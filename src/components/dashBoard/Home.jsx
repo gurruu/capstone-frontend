@@ -58,7 +58,7 @@ function Home() {
   return (
     <main className='main-container-dashboard'>
         <div className='main-title'>
-            <h3 className='dash-heading'>Jai Shree Ram!</h3>
+            <h3 className='dash-heading'>DashBoard</h3>
         </div>
 
         <div className='main-cards'>

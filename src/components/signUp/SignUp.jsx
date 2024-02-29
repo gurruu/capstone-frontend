@@ -6,13 +6,16 @@ import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 
 export default function SignUp() {
   const [currValue, setCurrValue] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: "",
-    state: "",
-    City: "",
-    address: "",
+    fullname: "",
+      email: "",
+      password: "",
+      confirmpassword: "",
+      phone: "",
+      address: "",
+      city: "",
+      state:"",
+      dob:"",
+      pincode:""
   });
 
   const [isFormDataValid, setIsFormDataValid] = useState(true);
@@ -26,7 +29,7 @@ export default function SignUp() {
     });
   };
 
-  const submitHandler = (e) => {
+  const resisterSubmitHandler = (e) => {
     e.preventDefault();
     const passw = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
     const enteredPass = currValue.password;
@@ -38,147 +41,192 @@ export default function SignUp() {
     setIsFormDataValid(true);
     console.log(currValue);
     setCurrValue({
-      firstname: "",
-      lastname: "",
+      fullname: "",
       email: "",
       password: "",
-      state: "",
-      city: "",
+      confirmpassword: "",
+      phone: "",
       address: "",
+      city: "",
+      state:"",
+      dob:"",
+      pincode:""
     });
   };
 
   return (
-    <div className="main-container">
-      <div className="left-container">
-        <img className="image-container" src={image} alt="" />
-        <div className="img-text">
-          <p>Hey! Start Investing for free.</p>
+   <div className="signin-box-size-signin">
+     <div className="sign-wrapper">
+      <form onSubmit={resisterSubmitHandler}>
+        <h1>Sign Up</h1>
+        <div className="input-wrapper">
+        <div className="sign-name-container">
+          <div className="input-box">
+            <input
+              type="text"
+              onChange={changeHandler}
+              id="fullname"
+              placeholder="Full Name"
+              name="fullname"
+              value={currValue.fullname}
+              required
+            />
+            <i className="bx bxs-user"></i>
+          </div>
+          <div className="input-box">
+            <input
+              type="text"
+              onChange={changeHandler}
+              id="address"
+              placeholder="Address"
+              name="address"
+              value={currValue.address}
+              required
+            />
+            <i className="bx bxs-user"></i>
+          </div>
         </div>
-      </div>
-      <div className="right-container">
-        <h3 className="heading-login-page">Welcome to Capstone</h3>
-        <div className="input-container">
-          <form onSubmit={submitHandler}>
-            <div className="name-container">
-              <div className="input">
-                <input
-                  type="text"
-                  onChange={changeHandler}
-                  id="firstname"
-                  placeholder="First Name"
-                  name="firstname"
-                  value={currValue.firstname}
-                  required
-                />
-              </div>
-              <div className="input">
-                <input
-                  type="text"
-                  onChange={changeHandler}
-                  id="lastname"
-                  placeholder="Last Name"
-                  name="lastname"
-                  value={currValue.lastname}
-                  required
-                />
-              </div>
-            </div>
-            <div className="input email ">
-              <input
-                type="email"
-                id="email"
-                placeholder="Email"
-                name="email"
-                onChange={changeHandler}
-                value={currValue.email}
-                required
-              />
-            </div>
-            <div className="input password">
-              <input
-                type="password"
-                id="password"
-                placeholder="Password"
-                name="password"
-                onChange={changeHandler}
-                value={currValue.password}
-                required
-                minLength={8}
-              />
-              {!isFormDataValid && (
-                <p className="error-class">
-                  Password must consist a lowercase,uppercase, special character
-                  and a digit.
-                </p>
-              )}
-            </div>
-            <div className="city-container input">
-              <div>
-                <input
-                  type="text"
-                  placeholder="City"
-                  name="City"
-                  required
-                  id="city"
-                  onChange={changeHandler}
-                  value={currValue.city}
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="State"
-                  name="state"
-                  required={true}
-                  id="state"
-                  onChange={changeHandler}
-                  value={currValue.state}
-                />
-              </div>
-            </div>
-            <div className="input">
-              <textarea
-                onChange={changeHandler}
-                value={currValue.address}
-                className="addressText"
-                name="address"
-                id="address"
-                cols="30"
-                rows="5"
-                placeholder="Address"
-              >
-                HomeIcon
-              </textarea>
-            </div>
-            <div className="button-container">
-              <button className="submit">Register</button>
-            </div>
-          </form>
+        <div className="sign-name-container">
+        <div className="input-box">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            name="email"
+            onChange={changeHandler}
+            value={currValue.email}
+            required
+          />
+          <i className="bx bxs-user"></i>
         </div>
-        <div className="under-line">
-          <p>Or</p>
-          <GoogleOAuthProvider  clientId="1006719320012-bpprguisgq6oq9o716i7lrd14s1ol0dr.apps.googleusercontent.com">
+        <div className="input-box">
+            <input
+              type="text"
+              placeholder="City"
+              name="city"
+              required
+              id="city"
+              onChange={changeHandler}
+              value={currValue.city}
+            />
+            <i className="bx bxs-user"></i>
+          </div>
+        
+        </div>
+
+        
+        <div className="sign-name-container">
+        <div className="input-box">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            name="password"
+            onChange={changeHandler}
+            value={currValue.password}
+            required
+            minLength={8}
+          />
+          {!isFormDataValid && (
+            <p className="error-class">
+              Password must consist a lowercase,uppercase, special character and
+              a digit.
+            </p>
+          )}
+          <i className="bx bxs-lock-alt"></i>
+        </div>
+          <div className="input-box">
+            <input
+              type="text"
+              placeholder="State"
+              name="state"
+              required
+              id="state"
+              onChange={changeHandler}
+              value={currValue.state}
+            />
+            <i className="bx bxs-user"></i>
+          </div>
+        </div>
+        <div className="sign-name-container">
+        <div className="input-box">
+          <input
+            type="password"
+            id="confirmpassword"
+            placeholder="Confirm Password"
+            name="confirmpassword"
+            onChange={changeHandler}
+            value={currValue.confirmpassword}
+            required
+          />
+          <i className="bx bxs-user"></i>
+        </div>
+        <div className="input-box">
+          <input
+            type="text"
+            id="dob"
+            placeholder="Date of birth"
+            name="dob"
+            onChange={changeHandler}
+            value={currValue.dob}
+            required
+          />
+          <i className="bx bxs-user"></i>
+        </div>
+        </div>
+        <div className="sign-name-container">
+        <div className="input-box">
+          <input
+            type="text"
+            id="phone"
+            placeholder="Phone"
+            name="phone"
+            onChange={changeHandler}
+            value={currValue.phone}
+            required
+          />
+          <i className="bx bxs-user"></i>
+        </div>
+        <div className="input-box">
+          <input
+            type="text"
+            id="pincode"
+            placeholder="Pincode"
+            name="pincode"
+            onChange={changeHandler}
+            value={currValue.pincode}
+            required
+          />
+          <i className="bx bxs-user"></i>
+        </div>
+        </div>
+        <button type="submit" className="btn-sign">
+        <Link to="/dashboard">
+          Register
+          </Link>
+        </button>
+        
+        <div className="register-link">
+          <p>
+            Already have an account? <Link to="/login"> Log In</Link>
+          </p>
+        </div>
+        </div>
+      </form>
+      <div className="under-line">
+        <p>Or</p>
+        <GoogleOAuthProvider clientId="1006719320012-bpprguisgq6oq9o716i7lrd14s1ol0dr.apps.googleusercontent.com">
           <GoogleLogin
             onSuccess={(credentialResponse) => {
               console.log(credentialResponse);
             }}
             onError={() => {
-              console.log("Login Failed")
+              console.log("Login Failed");
             }}
           />
-          
         </GoogleOAuthProvider>
-        </div>
-
-        <p>
-          Already have account?{" "}
-          <Link className="link-text" to="/login">
-            {" "}
-            Click Here
-          </Link>
-        </p>
       </div>
     </div>
+   </div>
   );
 }
