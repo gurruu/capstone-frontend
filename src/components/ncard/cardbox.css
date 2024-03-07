@@ -1,0 +1,25 @@
+.one{
+    color:#5d987e;
+    font-family: Montserrat,sans-serif;
+
+  }
+  
+  .two{
+    text-align:center;
+    font-family: Montserrat,sans-serif;
+
+  }
+
+  .container {
+    margin-top: 50px;
+    font-family: Montserrat,sans-serif;
+    margin-left: 190px;
+    width: 75%;
+    height: 25vh;
+  }
+
+
+  .ccard{
+    margin-top: 80px;
+    margin-bottom: 150px; 
+  }

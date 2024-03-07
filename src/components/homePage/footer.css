@@ -1,0 +1,94 @@
+footer {
+  background-color:black ;/* Footer background color */
+  color: #fff; /* Text color */
+  padding: 40px 20px; /* Padding for the footer */
+  font-family: Arial, sans-serif; /* Font family */
+  position: relative; /* Position footer container */
+}
+
+
+/* Social Icons Container */
+.social-icons {
+  margin-top: 10px;
+  margin-left: 100px; /* Change margin-left to 0 */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* Align icons vertically */
+}
+
+/* Social Icon Link */
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #daebea;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+/* Social Icon Link Hover */
+.social-icons a:hover {
+  color: #cfd445;
+}
+
+h3 {
+  margin-bottom: 20px; /* Bottom margin for headings */
+  font-size: 17px; /* Font size for headings */
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  margin-bottom: 10px; /* Bottom margin for list items */
+  font-size: 13px;
+  
+}
+Link:hover{
+  color: #cfd445!important;
+}
+a {
+  color: #fff; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.line1{
+  margin-left: 100px;
+}
+.copyright{
+  text-align: center;
+}
+.footer-section {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space evenly between sections */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.footer-section > div {
+  width: 30%; /* Set width for each section */
+}
+
+/* Copyright section */
+/* .footer-section > */
+.copyright {
+  /* width: 100%; Full width for copyright section */
+  margin-right: 10px;
+  margin-left: 40%;
+  text-align: center; 
+  position: absolute; /* Position at the bottom */
+  bottom: 20px; /* Distance from the bottom */
+  font-size: 11px; /* Smaller font size */
+  
+}
+
+/* Responsive adjustments for small screens */
+@media screen and (max-width: 768px) {
+  .footer-section > div {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 30px; /* Bottom margin for spacing */
+  }
+}
+

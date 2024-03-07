@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+  
+} 
+
+.box-size-login{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  background-image: url('../../assets/istockphoto-1368169112-612x612.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+  
+}
+.wrapper-login{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(70, 57, 57, 0.2);
+  backdrop-filter: blur(9px);
+  color: #413d3d;
+  border-radius: 12px;
+  padding: 30px 40px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
+.wrapper-login h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper-login .input-box-login{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  
+  margin: 30px 0;
+}
+.input-box-login input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(21, 7, 7, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  color: black;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box-login input:focus{
+  background-color: white;
+  color: black;
+}
+.input-box-login input::placeholder{
+  color: #0f0e0e;
+}
+.input-box-login i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+.wrapper-login .remember-forgot-login{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot-login label input{
+  accent-color: #0f0e0e;
+  margin-right: 3px;
+
+}
+.remember-forgot-login a{
+  color: #0f0e0e;
+  text-decoration: none;
+
+}
+.remember-forgot-login a:hover{
+  text-decoration: underline;
+}
+.wrapper-login .btn-login{
+  width: 100%;
+  height: 45px;
+  background: #459a7a;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+.wrapper-login .register-link-login{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+.register-link-login p a{
+  color: #459a7a;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link-login p a:hover{
+  text-decoration: underline;
+}
+
+.under-line-login{
+  /* width: inherit; */
+  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  /* border-bottom: 1px solid rgb(196, 176, 176); */
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+.under-line-login p{
+  /* width: 30%; */
+  /* background-color: red; */
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.login-close-modal{
+/* background-color: red; */
+width: 10px;
+position: fixed;
+top: 2px;
+right: 5px;
+cursor: pointer;
+}

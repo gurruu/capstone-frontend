@@ -1,0 +1,60 @@
+
+
+.Apple {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  /* background-color: hsl(0, 17%, 98%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+z-index: 99900;
+position: fixed;
+}
+
+.apple-flex-container{
+background-color: white;
+border: 1px solid rgb(217, 210, 210);
+border-radius: 10px;
+}
+
+.buy-header {
+  
+  color: #5E5E5E;
+ padding: 10px;
+}
+
+.linkstyle{
+  text-decoration: none;
+  color:#459a7a;
+  font-weight: 700;
+}
+
+.enterbutton{
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: large;
+  background-color: #459a7a;
+  cursor: pointer;
+  
+  
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+.enterbutton:hover{
+background-color: #3d8c6b;;
+}
+
+.close-buy-page{
+position: absolute;
+right: 170px;
+top: 20%;
+cursor: pointer;
+font-weight: bolder;
+}

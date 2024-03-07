@@ -1,0 +1,72 @@
+
+/* Accordion title */
+.accordion-title {
+  background-color: #f4f4f4; /* Background color of the accordion title */
+  color: #333;
+   /* Text color of the accordion title */
+  padding: 10px 20px; /* Padding around the accordion title */
+  cursor: pointer; /* Cursor style on hover */
+  position: relative; /* Position for the icons */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  font-family: Montserrat,sans-serif;
+
+  font-weight: 600;
+
+  }
+
+/* Hover effect on accordion title */
+.accordion-title:hover {
+  background-color:#f4f4f4 !important; /* Lighter background color on hover */
+}
+
+/* Accordion container */
+.accordion {
+  /* border: 1px solid #ddd;  */
+  /* Border around the accordion */
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Accordion item */
+.accordion-item {
+  /* border-bottom: 1px solid #ddd;  */
+  /* Border between accordion items */
+  margin-top: 10px;
+  margin-bottom:10px ;
+  font-family: Montserrat,sans-serif;
+  font-weight: 400;
+ 
+}
+
+/* Accordion title */
+
+/* Arrow icons */
+.accordion-title svg {
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Adjust position of the arrows */
+  transform: translateY(-50%);
+}
+
+/* Accordion content */
+.accordion-content {
+  display: none; /* Hide accordion content by default */
+  padding: 10px; /* Padding around accordion content */
+  font-family: Montserrat,sans-serif;
+
+}
+/* Active state for accordion title and content */
+.active .accordion-title::after {
+  border-width: 0 5px 5px 5px; /* Arrow pointing downwards */
+  border-color: transparent transparent #333 transparent;
+}
+
+.active + .accordion-content {
+  display: block; /* Display active accordion content */
+}
+
+
+/* Darker color for accordion title when collapsed */
+.accordion-item:not(.active) .accordion-title {
+  background-color: #ddd; /* Darker background color */
+}

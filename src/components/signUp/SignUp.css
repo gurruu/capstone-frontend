@@ -1,0 +1,224 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} 
+.signin-box-size-signin{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+  min-height: 100vh;
+  background-image: url('../../assets/istockphoto-1368169112-612x612.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+  
+  
+}
+.sign-wrapper{
+  
+  width: 700px;
+  height: 90%;
+ 
+  background: transparent;
+  border: 2px solid rgba(70, 57, 57, 0.2);
+  
+  color: #413d3d;
+  border-radius: 12px;
+  padding: 30px 40px;
+  background-color: #316676;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+  
+}
+.sign-name-container{
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-left: 100px;
+ 
+}
+.sign-wrapper h1{
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.sign-wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  
+  margin: 10px 0;
+  /* margin-left: 30px; */
+}
+.input-box input{
+  width: 80%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(21, 7, 7, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  color: black;
+  padding: 20px 45px 20px 20px;
+}
+
+.sign-wrapper .input-box-address {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.input-box-address input{
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(21, 7, 7, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  color: black;
+  padding: 20px 45px 20px 20px;
+  margin-right: 50px;
+}
+
+.input-box-address input:focus{
+  background-color: white;
+  color: black;
+}
+.input-box-address input::placeholder{
+  color: #0f0e0e;
+}
+.input-box-address i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+
+.input-box input:focus{
+  background-color: white;
+  color: black;
+}
+.input-box input::placeholder{
+  color: #0f0e0e;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+.sign-wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot label input{
+  accent-color: #fff;
+  margin-right: 3px;
+
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.sign-wrapper .btn-sign{
+  width: 50%;
+  height: 45px;
+  padding: 10px;
+  background: #459a7a;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-right: 50px;
+}
+.sign-wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 10px 0 15px;
+  
+
+}
+.register-link p{
+margin-right: 60px;
+margin-bottom: 0;
+}
+.register-link p a{
+  color: #459a7a;
+  text-decoration: none;
+  font-weight: 600;
+  
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
+
+.under-line{
+  /* width: inherit; */
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  /* border-bottom: 1px solid rgb(196, 176, 176); */
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+.under-line p{
+  /* width: 30%; */
+  /* background-color: red; */
+  text-align: center;
+  margin: 0;
+  /* margin-bottom: 2px; */
+}
+
+
+.sign-name-container .input-box{
+  /* background-color: red; */
+  margin: 0;
+  padding: 3px;
+}
+

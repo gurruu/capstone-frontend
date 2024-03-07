@@ -1,0 +1,121 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}  */
+.wrapper-login{
+    width: 1059px;
+    background: transparent;
+    border: 2px solid rgba(160, 151, 151, 0.2);
+    backdrop-filter: blur(9px);
+    /* color: #f72323; */
+    border-radius: 12px;
+    padding: 10px 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+  }
+  /* @media screen and (max-width: 1200px){
+  .table {
+    padding: 10px;
+    width: 170%;
+    margin-top: 2rem;
+  }} */
+  /* @media screen and (max-width: 768px) {
+    .Table{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 23rem;
+    }
+  } */
+  .tableHeaderRow {
+    background-color: #D9D9D9 !important;
+    color: white !important;
+  }
+  
+  .tableHeaderCell {
+    color: rgb(5, 4, 4) !important;
+    font-weight:bold !important;
+  }
+  
+  
+  th, td {
+    border: none; /* Set the border color to white for visibility */
+    padding: 0px;
+    text-align: left;
+    border-bottom: 0;
+  }
+  
+  /* th {
+    background-color: #ca1717; /* Slightly lighter black for header cells 
+  } */
+  
+  /* tbody tr:hover {
+    background-color: #555; /* Slightly lighter background on row hover for better interaction 
+  } */
+  
+  .App {
+    background-color: #121212; /* Dark background for the app */
+    /*color: white;*/ /* Ensure text is white for readability */
+    padding: 20px; /* Add some padding around the app content */
+  }
+  
+  .tick, .cross {
+    border: none; 
+    color: rgb(244, 241, 241); 
+    padding: 5px 10px; 
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+    margin-right: 5px; /* Add some space between the buttons */
+    background-color: green; /* Green background for the tick */
+    border: none;
+    color: white; 
+    padding: 5px 10px; 
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+    margin-right: 5px; /* Add some space between the buttons */
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+    transition: all 0.3s ease; /* Smooth transition for interaction */
+  }
+  
+  .tick:hover {
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3); /* Increase drop shadow on hover for a nice effect */
+  }
+  
+  
+  
+  .cross {
+    background-color: #CE1313; /* Red background for the cross */
+  
+  }
+  
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 1200px) {
+    .wrapper-login {
+      width: 100%; /* Make the wrapper take full width */
+      margin: 10px; /* Add some margin */
+    }
+    .tableHeaderCell, th, td {
+      padding: 8px; /* Reduce padding for smaller screens */
+      font-size: 14px; /* Adjust font size */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .wrapper-login {
+      backdrop-filter: none; /* Optionally disable backdrop filter for performance */
+    }
+    .tick, .cross {
+      padding: 5px; /* Reduce button size */
+      font-size: 12px; /* Reduce font size inside buttons */
+    }
+    /* Consider hiding less important columns on very small screens */
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+  
+  
+  
