@@ -4,7 +4,7 @@ import { Doughnut } from 'react-chartjs-2'
 import data from '../../data/sourceData.json'
 import DashTable from "../dashboardTable/Dashtable";
 import Profile from "./Profile";
-
+import NewInvest from "../NewInvestment/NewInvest"
 
 function Home({ investmentData }) {
   Chart.register(ArcElement);
@@ -93,12 +93,11 @@ function Home({ investmentData }) {
             />
           </div>
         </div>
-        <div className="card ">
-          <div className="card-inner">
-            <h3>Start an Investment.</h3>
-          </div>
-          <button className="dash-start-btn">Start</button>
-        </div>
+        <div className="card-doughnut">
+        <div className="card-inner">
+      <NewInvest></NewInvest>
+      </div>
+      </div>
       </div>
       <DashTable />
     </main>

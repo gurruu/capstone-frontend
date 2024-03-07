@@ -1,0 +1,95 @@
+body {
+    background-color: #faf8f8;
+  }
+  
+  .container-goldinvest {
+    text-align: left;
+    background-color: #faf8f8;
+    margin-top: 3%;
+  }
+  
+  .sub-container-goldinvest {
+    text-align: left;
+    margin-top: 3%;
+    margin-left: 30%;
+  }
+  
+  .heading-goldinvest {
+    color: #5c5b5b;
+    font-family: Montserrat;
+    font-size:300%;
+  }
+  
+  .input-container-goldinvest {
+    margin-bottom: 15px;
+  }
+  
+  
+  .input-container-goldinvest label {
+    display: inline-block;
+    font-family: 'Open Sans';
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    width: 100px;
+    text-align: left;
+    margin-right: 10px;
+    width: 200px; /* Increased width of labels */
+    font-size: 23px; /* Increased font size of labels */
+  }
+  
+  .input-container-goldinvest input,select {
+    /* padding: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 200px; */
+  
+    padding: 10px; /* Increased padding for better visibility */
+    width: 240px; /* Increased width of input boxes */
+    font-size: 18px; /* Increased font size of input boxes */
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    /* width: calc((100% - 150px) / 3); Adjust width here */
+    display: inline-block;
+    margin-right: 10px; /* Add margin between inputs */
+  }
+  
+  
+  
+  
+  .input-container-goldinvest input:last-child {
+    margin-right: 0; /* Remove margin for last input */
+  }
+  
+  .center-goldinvest {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #invest-btn-goldinvest {
+    text-align: center;
+    align-content: center;
+    width: 20%;
+    border:none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    color: #FFFFFF;
+    background-color: #459a7a;
+    padding: 10px 20px;
+    border-radius:30px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-right: 350px;
+  }
+  
+  #invest-btn-goldinvest:hover {
+    background-color: #3c7e63;
+  }
+  
