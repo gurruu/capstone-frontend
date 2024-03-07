@@ -1,0 +1,38 @@
+.canus-container {
+    text-align: center;
+    padding-top: 70px;
+    margin-bottom: 50px; /* Adjust margin as needed */
+  }
+  
+  .help-text {
+    color: #000000; /* Black color for the help text */
+    font-size: 24px; /* Bigger font size than the lines in point 2 */
+    font-family: Montserrat,sans-serif;
+
+  }
+  
+  .query-text {
+    font-size: 18px; /* Font size for the query text */
+    font-family: Montserrat,sans-serif;
+
+  }
+  
+  .email-button {
+    font-family: Montserrat,sans-serif;
+    font-weight: 600;
+    margin-top: 5rem;
+    background-color: #459a7a; /* Button color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 25px;
+    text-decoration: none; /* Remove default underline */
+    transition: background-color 0.3s; /* Add transition effect */
+  }
+  
+  .email-button:hover {
+    background-color: #357764; /* Darker color on hover */
+  }
+  

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.hero-section {
+  text-align: center;
+  padding: 50px 20px;
+  padding-top: 100px;
+  background-color: #f3f2f3;
+  height: 80vh;
+  background-image: url('../../assets/image\ 28.png');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
+.hero-title {
+  font-size: 65px;
+  margin-top: 50px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-highlight {
+  color: #5c977c;
+}
+
+.hero-secondary-title {
+  color: #000000; /* Black color for "Your Financial Future" */
+  font-family: Montserrat,sans-serif;
+
+}
+
+.hero-description {
+  font-size: 18px;
+  margin-top: 90px;
+}
+
+.get-started-button {
+  background-color: #459a7a;
+  font-family: Montserrat,sans-serif;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #3c7b63; /* One shade darker on hover */
+}
+
+@keyframes colorChange {
+  0% {
+    color: #5c977c; /* Initial color */
+  }
+  50% {
+    color: #a8a925; /* Yellow color */
+  }
+  100% {
+    color: #459a7a; /* Final color */
+  }
+}
+
+.investo-text {
+  animation: colorChange 3s infinite alternate; /* Apply animation */
+  color: #5c977c; /* Color for Investo */
+  display: inline; /* Ensure it appears in the same line */
+  font-size: 70px;
+  font-family: Montserrat,sans-serif;
+}
+
+.empowering-text {
+  color: #000000; /* Color for Empowering Your Financial Future */
+  display: inline; /* Ensure it appears in the same line */
+  font-family: Montserrat,sans-serif;
+  padding-left: 20px;
+}

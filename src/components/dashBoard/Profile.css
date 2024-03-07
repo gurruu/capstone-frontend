@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.app-profile{
+  height: 100%;
+  width: 100%;
+  /* background-color: hsl(0, 17%, 98%); */
+ 
+  font-weight:600;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: red; */
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  color: #5E5E5E;
+  font-weight: bolder;
+  
+}
+.header-profile {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  padding-bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  color: #5E5E5E;
+}
+
+.profile {
+  display: flex; /* Add flex display */
+}
+.myprofile{
+  font-size: 25px;
+  width: 250px;
+  display: inline-flex;
+}
+
+.divider {
+  border-top: 1px solid #5E5E5E;
+  width: 100%; /* Line stretches across the container */
+  margin-top: 5px; /* Add some space between the header and the line */
+}
+
+.profile img {
+  width: 30px;
+  height: 30px;
+  margin-left: 770px; /* Add some space between text and icon */
+}
+
+.main-profile{
+  background-color: rgb(24, 23, 23);
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 50px; */
+  /* border: 1px solid rgb(135, 132, 132); */
+  background-color: white;
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 0;
+  position: relative;
+  top: 0;
+
+}
+
+.main-profile .left {
+  width: 60%;
+  padding: 20px;
+}
+
+.right {
+  width: 35%;
+}
+
+.field-profile {
+  font-family: Montserrat;  
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.field-profile label {
+  flex: 0 0 30%; /* Set width of the label */
+  margin-right: 10px; /* Add some space between label and input */
+  font-family: Montserrat;  
+
+}
+
+.field-profile input {
+  flex: 1;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none; /* Remove border */
+  padding: 8px;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.card-profile {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  background: #FFFFFF;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 20px; /* Adjust padding as needed */
+  margin-bottom: 20px;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+
+
+.card-profile h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.update-btn,
+.buy-btn{
+  background: #459A7A;
+  border-radius: 20px;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  color: #FFFFFF;
+  border: none; /* Remove border */
+  cursor: pointer;
+  width: 100px;
+  padding: 10px 10px 10px 10px;
+}
+
+.buy-btn-expand{
+  width: 100px;
+}
+
+.save-btn {
+  background: #459A7A;
+  border-radius: 20px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+  border: none; /* Remove border */
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  left:55%;
+  top: 10px;
+  width: 100px;
+
+}
+
+
+.update-btn:hover,
+.buy-btn:hover,
+.save-btn:hover {
+  background-color: #3d8c6b; /* One shade darker */
+}
+
+.footer-profile {
+  display: flex!important;
+  justify-content: center!important;
+  margin-top: 20px!important;
+  align-items: center!important; /* Align items vertically */
+  margin-bottom: 0;
+}
+
+.close-profile-modal{
+  position: absolute;
+  /* background-color: rebeccapurple; */
+  right: 220px;
+  top: 97px;
+  cursor: pointer;
+}
+
+

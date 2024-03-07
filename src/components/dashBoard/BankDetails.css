@@ -1,0 +1,58 @@
+.card-bank {
+  background-color: #faf8f8;
+  font-family: Open Sans;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+.header-bank{
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 1000;
+font-size: 37px;
+line-height: 59px;
+text-align: center;
+color: rgba(0, 0, 0, 0.63);
+}
+
+
+.header-bank, .section-bank, .footer-bank {
+  margin-bottom: 20px;
+}
+
+.input-group-bank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+}
+
+.input-group-bank input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.footer-bank {
+  display: flex;
+  justify-content: center;
+}
+.footer-bank button {
+  background-color: #459a7a;
+  font-family:Raleway;
+  font-size: 21px;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.footer-bank button:hover {
+  background-color: #35735a;
+}
