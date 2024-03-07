@@ -6,7 +6,7 @@ const BankDetails = () => {
     <div className="card-bank">
 
       <div className="header-bank">
-        <h7>Sign Up</h7>
+        <h7>Account Details</h7>
       </div>
 
 

@@ -4,7 +4,7 @@ import './Profile.css'; // Assuming you have a CSS file for styling
 import profileIcon from './profile-icon.png'; // Import the image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
-
+import BankDetails from './BankDetails';
 
 function Profile({ openProfileModal, children, closeProfileModal, showBuyModal }) {
   // if (!openProfileModal) return null
@@ -72,7 +72,7 @@ function Profile({ openProfileModal, children, closeProfileModal, showBuyModal }
           <div  className="card-profile">
             <h3>Update your bank & Verification Details</h3>
             {/* <button className="update-btn">Update</button> */}
-            <Link className="update-btn">Update</Link>
+            <Link to='/bankdetails' className="update-btn">Update</Link>
           </div>
           <div  className="card-profile ">
             <h3>Purchase a subscription</h3>

@@ -14,6 +14,7 @@ import AdvisorPage from "./pages/advisorpage/AdvisorPage";
 import NewInvest from "./components/NewInvestment/NewInvest";
 import GoldInvest from "./components/NewInvestment/GoldInvest";
 import FDInvest from "./components/NewInvestment/FDInvest";
+import AccountDetail from "./pages/bankdetailpage/AccountDetail";
 function App() {
   return (
     <>
@@ -27,11 +28,12 @@ function App() {
           <Route exact path="/dashboard" element={<DashBoard />} />
           <Route exact path="/profilepage" element={<ProfilePage />} />
           <Route exact path="/buy" element={<BuyPage />} />
-          <Route exact path="/BankDetails" element={<BankDetails />} />
+          {/* <Route exact path="/BankDetails" element={<BankDetails />} /> */}
           <Route exact path="/SubscriptionPage" element={<SubscriptionPage/>} />
           <Route exact path="/advisors" element={<AdvisorPage />} />
           <Route exact path="/FDInvest" element={<FDInvest />} />
           <Route exact path="/GoldInvest" element={<GoldInvest />} />
+          <Route exact path="/bankdetails" element={<AccountDetail />} />
         </Routes>
       </BrowserRouter>
     </>

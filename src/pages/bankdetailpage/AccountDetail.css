@@ -1,0 +1,15 @@
+.account-detail-cont{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.account-detail-wrap{
+    display: grid;
+  grid-template-columns: 260px 1fr ;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+  height: 100vh;
+}
