@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.capstone-incedo</groupId>
-    <artifactId>capstone-incedo-app</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>your-project-name</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -14,31 +14,122 @@
     </properties>
 
     <dependencies>
-        <!-- Add your dependencies here -->
-         "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^5.0.8",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mui/icons-material": "^5.15.11",
-    "@mui/material": "^5.15.11",
-    "@react-oauth/google": "^0.12.1",
-    "bootstrap": "^5.3.3",
-    "chart.js": "^4.4.2",
-    "jwt-decode": "^4.0.0",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.10.1",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.4.1",
-    "react-icons": "^5.0.1",
-    "react-router-dom": "^6.22.1",
-    "react-script": "^2.0.5",
-    "react-scripts": "^5.0.1",
-    "react-typed": "^2.0.12",
-    "recharts": "^2.7.2"
+        <!-- React and related libraries -->
+        <dependency>
+            <groupId>com.github.japgolly.react</groupId>
+            <artifactId>core</artifactId>
+            <version>18.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.japgolly.react</groupId>
+            <artifactId>dom</artifactId>
+            <version>18.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@emotion/react</artifactId>
+            <version>11.11.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@emotion/styled</artifactId>
+            <version>11.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@fontsource/roboto</artifactId>
+            <version>5.0.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@fortawesome/fontawesome-svg-core</artifactId>
+            <version>6.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@fortawesome/free-brands-svg-icons</artifactId>
+            <version>6.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@fortawesome/free-solid-svg-icons</artifactId>
+            <version>6.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@fortawesome/react-fontawesome</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@mui/icons-material</artifactId>
+            <version>5.15.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@mui/material</artifactId>
+            <version>5.15.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>@react-oauth/google</artifactId>
+            <version>0.12.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>5.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>chart.js</artifactId>
+            <version>4.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>jwt-decode</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>react-bootstrap</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>react-chartjs-2</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.japgolly.react</groupId>
+            <artifactId>icons</artifactId>
+            <version>5.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>react-router-dom</artifactId>
+            <version>6.22.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>react-script</artifactId>
+            <version>2.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>react-scripts</artifactId>
+            <version>5.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>react-typed</artifactId>
+            <version>2.0.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>recharts</artifactId>
+            <version>2.7.2</version>
+        </dependency>
     </dependencies>
 
     <build>
