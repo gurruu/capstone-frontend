@@ -5,7 +5,7 @@
   padding: 50px 20px;
   padding-top: 100px;
   background-color: #f3f2f3;
-  height: 80vh;
+  height: 100vh;
   background-image: url('../../assets/image\ 28.png');
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -35,6 +35,12 @@
   margin-top: 90px;
 }
 
+.get-started-button-container{
+  /* background-color: red; */
+  position: relative;
+  top: 15%;
+  bottom: 0%;
+}
 .get-started-button {
   background-color: #459a7a;
   font-family: Montserrat,sans-serif;
@@ -47,6 +53,7 @@
   border-radius: 25px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  
 }
 
 .get-started-button:hover {

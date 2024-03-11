@@ -8,9 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 export default function SignUp() {
-  const [userIdCounter, setUserIdCounter] = useState(1007); 
   const [currValue, setCurrValue] = useState({
-    userID: userIdCounter,
     firstName: "",
     lastName: "",
     email: "",
@@ -22,19 +20,18 @@ export default function SignUp() {
     address: "",
   });
 
-  useEffect(() => {
-    setCurrValue((prevValue) => ({
-      ...prevValue,
-      userID: userIdCounter,
-    }));
-  }, [userIdCounter]);
 
-  const incrementUserIdCounter = () => {
-    setUserIdCounter((prevCounter) => prevCounter + 1);
-  };
 
   const [isFormDataValid, setIsFormDataValid] = useState(true);
   const navigate = useNavigate();
+
+
+  const notifyRegistration = () => toast.success('Registration Successful!');
+  const errRegistration = () => toast.error('Registration Unsuccessful!');
+
+  
+  const notifyLogin = () => toast.success('Login Successful!');
+  const errLogin = () => toast.error('Login Unsuccessful!');
 
   const changeHandler = (e) => {
     setCurrValue((prev) => {
@@ -72,6 +69,7 @@ export default function SignUp() {
       incrementUserIdCounter();
       console.log("register data",response);
       if (!response.ok) {
+        errRegistration();
         const errorData = await response.json();
         throw new Error(errorData.message || "Failed to register");
       }
@@ -83,7 +81,7 @@ export default function SignUp() {
       localStorage.setItem('jwtToken', responseData.token);
       localStorage.setItem('userData', JSON.stringify(decodedToken));
 
-      console.log("decoded token",decodedToken);
+      notifyRegistration();
       navigate("/dashboard");
     } catch (error) {
       console.error("Registration failed:", error);
@@ -91,7 +89,6 @@ export default function SignUp() {
     setIsFormDataValid(true);
     console.log(currValue);
     setCurrValue({
-      userID: userIdCounter,
       firstName: "",
       lastName: "",
       email: "",
@@ -106,36 +103,53 @@ export default function SignUp() {
 
 
 
-  const sendUserDataToBackend = async (userData) => {
+  const sendUserDataToBackend = async (googleUserData,credentialResponse) => {
     try {
-      console.log("inside google oauth");
-      const response = await fetch('https://localhost:7244/api/oauth-login', {
-        method: 'POST',
+
+      const response = await fetch("https://localhost:7244/api/oauth-login", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData),
+        body: JSON.stringify(googleUserData),
       });
       if (!response.ok) {
-        throw new Error('Failed to send user data');
+        errLogin();
+        throw new Error("Failed to send user data");
       }
 
-      console.log('User data sent successfully');
+
+      const authToken = credentialResponse.credential;
+      const userName = jwtDecode(authToken).given_name;
+      const userData = JSON.stringify(jwtDecode(authToken));
+
+
+      localStorage.setItem('jwtToken',authToken);
+      localStorage.setItem('userName',userName);
+      localStorage.setItem('userData', userData);
+
+      notifyLogin();
+      console.log("User data sent successfully");
       navigate("/dashboard");
     } catch (error) {
-      console.error('Error sending user data:', error);
+      console.error("Error sending user data:", error);
     }
   };
 
-  const handleGoogleOAuthResponse = (googleUserData) => {
+  const handleGoogleOAuthResponse = (googleUserData,credentialResponse) => {
     const userDataToSend = {
-      id: googleUserData.exp,
-      name: googleUserData.name,
+      firstName: googleUserData.name,
+      lastName: "",
       email: googleUserData.email,
-      givenName: googleUserData.given_name,
+      password: "",
+      phone:"",
+      company: "",
+      city:"",
+      state:"",
+      address:"",
     };
 
-    sendUserDataToBackend(userDataToSend);
+    sendUserDataToBackend(userDataToSend,credentialResponse);
   };
 
 
@@ -336,8 +350,7 @@ export default function SignUp() {
               onSuccess={credentialResponse => {
                 if (credentialResponse.credential != null) {
                   const USER_CREDENTIAL = jwtDecode(credentialResponse.credential);
-                  console.log(USER_CREDENTIAL);
-                  handleGoogleOAuthResponse(USER_CREDENTIAL);
+                  handleGoogleOAuthResponse(USER_CREDENTIAL,credentialResponse);
                 }
                 console.log("user logged in successfully");
               }}
