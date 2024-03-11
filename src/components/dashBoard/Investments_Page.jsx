@@ -53,7 +53,7 @@ function Investments_Page() {
     if (email) {
       fetchInvestmentData(email);
     } else {
-      setError('JWT token or user email not found in Local Storage');
+      // setError('JWT token or user email not found in Local Storage');
     }
   }, []);
 
@@ -65,6 +65,7 @@ function Investments_Page() {
          openSidebarToggle={openSidebarToggle}
          OpenSidebar={OpenSidebar} 
     />
+    <div className='main-container-dashboard'>
     <div className='dash-table-wrap-one'>
       <div className='table-comp-heading-one'>
         <h1>Investments</h1>
@@ -104,6 +105,7 @@ function Investments_Page() {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
     </div>
   );

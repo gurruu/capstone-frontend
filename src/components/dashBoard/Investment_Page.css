@@ -43,10 +43,11 @@
     width: 100%;
     background-color: white;
   }
-  
+ 
   .table-comp-heading-investments {
     color: #413d3d;
     padding: 20px;
+    text-align: center;
   }
   
   .dash-table-investments {
@@ -82,4 +83,11 @@
     border: none;
     border-radius: 60px;
   }
+.table-comp-heading-one{
+  text-align: center;
+}
+
+.table-data-row-one{
+  font-weight: bold;
+}
   
