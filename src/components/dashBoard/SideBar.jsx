@@ -69,6 +69,13 @@ function SideBar({ openSidebarToggle, OpenSidebar,showProfileModal }) {
         </li>
         </Link>
 
+        <Link to="/Investments_Page"><li className='sidebar-list-item'>
+                <a href="">
+                    <BsCashStack className='icon'/>Investments
+                </a>
+            </li>
+        </Link>
+
         <li className="sidebar-list-item">
           <a className="sidebar-item" href="">
             <BsMenuButtonWideFill className="icon" /> Reports

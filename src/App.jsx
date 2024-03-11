@@ -15,6 +15,7 @@ import NewInvest from "./components/NewInvestment/NewInvest";
 import GoldInvest from "./components/NewInvestment/GoldInvest";
 import FDInvest from "./components/NewInvestment/FDInvest";
 import AccountDetail from "./pages/bankdetailpage/AccountDetail";
+import Investments_Page from "./components/dashBoard/Investments_Page";
 function App() {
   return (
     <>
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/FDInvest" element={<FDInvest />} />
           <Route exact path="/GoldInvest" element={<GoldInvest />} />
           <Route exact path="/bankdetails" element={<AccountDetail />} />
+          <Route path="/Investments_Page" element={<Investments_Page/>}/>
         </Routes>
       </BrowserRouter>
     </>
