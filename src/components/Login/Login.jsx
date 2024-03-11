@@ -31,7 +31,6 @@ export default function Login() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      console.log("inside api");
       const response = await fetch("https://localhost:7244/api/login", {
         method: "POST",
         headers: {
@@ -47,14 +46,14 @@ export default function Login() {
 
       notify();
       const responseData = await response.json();
-      console.log(responseData);
 
       
       const decodedToken = jwtDecode(responseData.token);
+      const userName = responseData.userName;
+      localStorage.setItem('userName',userName);
       localStorage.setItem('jwtToken', responseData.token);
       localStorage.setItem('userData', JSON.stringify(decodedToken));
 
-      console.log("decoded token",decodedToken);
       navigate("/dashboard");
     } catch (error) {
       console.error("Login failed:", error);
@@ -68,20 +67,29 @@ export default function Login() {
     });
   };
 
-  const sendUserDataToBackend = async (userData) => {
+  const sendUserDataToBackend = async (googleUserData,credentialResponse) => {
     try {
-      console.log("inside google oauth");
       const response = await fetch("https://localhost:7244/api/oauth-login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData),
+        body: JSON.stringify(googleUserData),
       });
       if (!response.ok) {
         err();
         throw new Error("Failed to send user data");
       }
+
+
+      const authToken = credentialResponse.credential;
+      const userName = jwtDecode(authToken).given_name;
+      const userData = JSON.stringify(jwtDecode(authToken));
+
+
+      localStorage.setItem('jwtToken',authToken);
+      localStorage.setItem('userName',userName);
+      localStorage.setItem('userData', userData);
 
       notify();
       console.log("User data sent successfully");
@@ -91,15 +99,20 @@ export default function Login() {
     }
   };
 
-  const handleGoogleOAuthResponse = (googleUserData) => {
+  const handleGoogleOAuthResponse = (googleUserData,credentialResponse) => {
     const userDataToSend = {
-      id: googleUserData.exp,
-      name: googleUserData.name,
+      firstName: googleUserData.name,
+      lastName: "",
       email: googleUserData.email,
-      givenName: googleUserData.given_name,
+      password: "",
+      phone:"",
+      company: "",
+      city:"",
+      state:"",
+      address:"",
     };
 
-    sendUserDataToBackend(userDataToSend);
+    sendUserDataToBackend(userDataToSend,credentialResponse);
   };
 
   return (
@@ -166,8 +179,7 @@ export default function Login() {
                     const USER_CREDENTIAL = jwtDecode(
                       credentialResponse.credential
                     );
-                    console.log(USER_CREDENTIAL);
-                    handleGoogleOAuthResponse(USER_CREDENTIAL);
+                    handleGoogleOAuthResponse(USER_CREDENTIAL,credentialResponse);
                   }
                   console.log("user logged in successfully");
                 }}

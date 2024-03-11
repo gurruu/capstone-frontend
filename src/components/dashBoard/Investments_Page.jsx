@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import './Dashtable.css';
+import "../dashboardTable/Dashtable.css"
 import { ThumbUp, ThumbDown, GetApp } from '@mui/icons-material';
+import SideBar from './SideBar';
+import Header from "./Header";
 
-function Dashtable() {
-  const [investmentData, setInvestmentData] = useState([]);
+function Investments_Page() {
   const [totalPortfolioValue, setTotalPortfolioValue] = useState(0);
   const [error, setError] = useState(null);
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+  const [investmentData, setInvestmentData] = useState([]);
+
+
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle);
+  };
+
 
   const fetchInvestmentData = async (userEmail) => {
     try {
@@ -48,12 +57,18 @@ function Dashtable() {
   }, []);
 
   return (
+    <div className="grid-container">
+     <Header OpenSidebar={OpenSidebar} />
+    <SideBar 
+         showProfileModal={() => setShowProfile(true)}
+         openSidebarToggle={openSidebarToggle}
+         OpenSidebar={OpenSidebar} 
+    />
     <div className='dash-table-wrap-one'>
       <div className='table-comp-heading-one'>
-        <h1>Recent Investments</h1>
+        <h1>Investments</h1>
       </div>
       {error && <div>{error}</div>}
-      <div>Total Portfolio Value: {totalPortfolioValue}</div>
       <table className='dash-table-one'>
         <thead>
           <tr className='table-head-row-one'>
@@ -87,7 +102,8 @@ function Dashtable() {
         </tbody>
       </table>
     </div>
+    </div>
   );
 }
 
-export default Dashtable;
+export default Investments_Page;

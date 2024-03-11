@@ -3,7 +3,9 @@
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: center;
+  align-items: center;
   color: #5E5E5E;
+  margin-left: 200px;
   /* background-color: red; */
 }
 
