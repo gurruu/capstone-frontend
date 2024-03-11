@@ -8,3 +8,13 @@
     font-size: 20px;
     text-align: center;
 }
+
+   .sidebar-list-item.active {
+    background-color: #455550;
+    
+  }
+  
+  .sidebar-list-item.active a {
+    color: #69ad94; /* Set active item text color */
+  }
+  

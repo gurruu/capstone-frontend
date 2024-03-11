@@ -1,47 +1,46 @@
-
 .dash-table-wrap-one {
-    width: 100%;
-    background-color: white;
-  }
+  width: 100%;
+  background-color: white;
+}
+
+.table-comp-heading-one {
+  color: #413d3d;
+  padding: 20px;
+}
+
+.dash-table-one {
+  width: 100%;
+  border-collapse: collapse; /* Remove default table spacing */
+}
+
+.table-head-row-one {
+  background-color: rgb(182, 177, 177);
+  color: #413d3d;
+  font-weight: bold;
   
-  .table-comp-heading-one {
-    color: #413d3d;
-    padding: 20px;
-  }
-  
-  .dash-table-one {
-    width: 100%;
-    border-collapse: collapse; /* Remove default table spacing */
-  }
-  
-  .table-head-row-one {
-    background-color: rgb(182, 177, 177);
-    color: #413d3d;
-    font-weight: bold;
-    
-  }
-  
-  .table-content-one {
-    padding: 15px;
-    text-align: center;
-    color:black;
-  }
-  
-  .table-data-row-one:nth-child(even) {
-    background-color: #f2f2f2; /* Alternate row background color */
-  }
-  
-  /* .display-none-text {
-    display: none;
-  } */
-  
-  .withdraw-btn-table-one {
-    background: #459a7a;
-    color: white;
-    font-weight: bold;
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 60px;
-  }
-  
+}
+
+.table-content-one {
+  padding: 15px;
+  text-align: center;
+  color:black;
+}
+
+.table-data-row-one:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row background color */
+}
+
+/* .display-none-text {
+  display: none;
+} */
+
+.withdraw-btn-table-one {
+  background: #459a7a;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 60px;
+}
+

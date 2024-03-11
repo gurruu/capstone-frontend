@@ -27,7 +27,15 @@ const Navbar = () => {
 
       <div className="navbar-left">
         <button as="button" class="tab__bJxhD" tabindex="0" cur-idx="0" is-selected=" ">
-        <Link to="/dashboard" className="nav-item-div"> Dashboard</Link>
+          {/* <div onClick={handleClick}>
+            {authToken ? */}
+              <Link to="/dashboard" className="nav-item-div">
+                Dashboard
+              </Link>
+              
+            
+
+          {/* </div> */}
         </button>
         <button as="button" class="tab__bJxhD" tabindex="0" cur-idx="0" is-selected=" ">
           <div className="nav-item-div">Investment Feed</div>
