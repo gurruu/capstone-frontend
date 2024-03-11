@@ -7,7 +7,8 @@ function Subscription() {
       <div className="cardone">
         <h2>Monthly</h2>
         <p>₹999</p>
-        <p className='space'>Basic Plan</p>
+        <p className='para'>0.00%</p>
+        <p>Saving Annually</p>
       </div>
       <div className="cardone">
         <h2>Quarterly</h2>
