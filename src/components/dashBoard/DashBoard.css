@@ -158,12 +158,11 @@ body {
   /* background-color: black; */
 }
 
-.main-cards-doughnut{
+.dashboard-row-2{
   margin-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 100px;
+ display: flex;
   margin: 15px 0;
+  /* background-color: red; */
 }
 
 .card {
@@ -187,7 +186,7 @@ display: flex;
   padding: 8px 15px;
   border-radius: 5px;
   color: #413d3d;
-  
+  /* background-color: red; */
 }
 .dash-start-btn{
 background: #459a7a;
@@ -234,7 +233,7 @@ box-shadow: none;
   justify-content: center;
   align-items: center;
   height: 150px;
-  /* background-color: red; */
+  /* background-color: rgb(15, 14, 14); */
 }
 
 .dash-table-invest-info{
@@ -269,6 +268,7 @@ padding-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
 }
 
 .card-inner > .card_icon {
@@ -285,6 +285,30 @@ padding-bottom: 5px;
   /* background-color: red; */
 }
 
+.card-new-invest{
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10%;
+  /* background-color: red; */
+  position: relative;
+  left: 14%;
+}
+
+.card-chart-dashboard{
+  width: 350px;
+  height: 290px;
+  margin-bottom: 10%;
+  /* background-color: red; */
+  position: relative;
+  left: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #413d3d;
+}
+.card-chart-dashboard{
+
+}
 /* End Main  */
 
 

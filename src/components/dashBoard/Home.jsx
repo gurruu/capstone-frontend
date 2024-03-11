@@ -70,16 +70,16 @@ function Home({ investmentData }) {
           <button className="dash-start-btn">Start</button>
         </div>
       </div>
-
-      <div className="main-cards-doughnut">
+  
+      <div className="dashboard-row-2">
         <div className=" card-doughnut">
           <div className="card-inner-doughnut">
             <Doughnut
               data={{
-                labels: chartLabels,
+                labels: data.map((val) => val.label),
                 datasets: [
                   {
-                    data: chartData,
+                    data: data.map((val) => val.value ),
                     backgroundColor: [
                       '#BBCFAC',
                       '#003943',
@@ -93,8 +93,14 @@ function Home({ investmentData }) {
             />
           </div>
         </div>
-        <div className="card-doughnut">
-        <div className="card-inner">
+        <div className="card-chart-dashboard">
+        <div className="card-new-invest-inner">
+      {/* <NewInvest></NewInvest> */}
+      <p>Charts here</p>
+      </div>
+      </div>
+        <div className="card-new-invest">
+        <div className="card-new-invest-inner">
       <NewInvest></NewInvest>
       </div>
       </div>
