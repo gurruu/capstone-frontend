@@ -1,13 +1,21 @@
 import React from 'react';
 import './advisorTable.css';
+import { useNavigate } from 'react-router-dom';
 import { data } from '../../data/advisortabledata';
+import AdvisorSubscription from './advisorsubscription';
+ 
 import Header from './Header';
 import SideBar from './SideBar';
-
+ 
 function AdvisorTable() {
+    const navigate = useNavigate();
+ 
+  const handleSelectClick = () => {
+    navigate('/advisorsubscription'); // Navigate to the subscription page
+  };
   return (
     <>
-    
+   
     <div className='advisor-table-wrap'>
        
         <div className='advisor-table-head-wrap'>
@@ -28,7 +36,7 @@ function AdvisorTable() {
                 <li>{val.roi}</li>
                 <li>{val.expertise}</li>
                 {/* <li>{val.action}</li> */}
-                <li><button className='advisor-select-btn-table'>Select</button></li>
+                <li><button className='advisor-select-btn-table' onClick={handleSelectClick}>Select</button></li>
             </ul>
         </div>
             )
@@ -37,5 +45,5 @@ function AdvisorTable() {
     </>
   )
 }
-
+ 
 export default AdvisorTable
