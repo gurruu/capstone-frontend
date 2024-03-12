@@ -76,7 +76,7 @@ function SideBar({ openSidebarToggle, OpenSidebar,showProfileModal }) {
       </Link>
 
       <Link to="/Investments_Page">
-      <li className={`sidebar-list-item ${activeItem === '/investment' ? 'active' : ''}`}>
+      <li className={`sidebar-list-item ${activeItem === '/Investments_Page' ? 'active' : ''}`}>
         <a className="sidebar-item" href="">
           <BsMenuButtonWideFill className="icon" /> Investments
         </a>
