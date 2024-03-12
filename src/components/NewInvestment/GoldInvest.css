@@ -4,20 +4,24 @@ body {
   
   .container-goldinvest {
     text-align: left;
-    background-color: #faf8f8;
+    /* background-color: #faf8f8; */
     margin-top: 3%;
+   background-color:#eee8e8;
   }
   
   .sub-container-goldinvest {
     text-align: left;
     margin-top: 3%;
-    margin-left: 30%;
+    margin-left: 40%;
+    padding-left: 4%;
+    margin-right: 10%;
+    background-color: #686464;
   }
   
   .heading-goldinvest {
     color: #5c5b5b;
     font-family: Montserrat;
-    font-size:300%;
+    font-size:250%;
   }
   
   .input-container-goldinvest {
@@ -32,11 +36,12 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    width: 100px;
+    width: 10px;
     text-align: left;
-    margin-right: 10px;
+    margin-right: 1px;
+    margin-left: 20px;
     width: 200px; /* Increased width of labels */
-    font-size: 23px; /* Increased font size of labels */
+    font-size: 18px; /* Increased font size of labels */
   }
   
   .input-container-goldinvest input,select {
@@ -47,8 +52,8 @@ body {
     width: 200px; */
   
     padding: 10px; /* Increased padding for better visibility */
-    width: 240px; /* Increased width of input boxes */
-    font-size: 18px; /* Increased font size of input boxes */
+    width: 150px; /* Increased width of input boxes */
+    font-size: 13px; /* Increased font size of input boxes */
     background: #FFFFFF;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -69,16 +74,63 @@ body {
     display: flex;
     justify-content: center;
   }
+
   
+  
+  .frequency-goldinvest {
+    background-color: white;
+    border: none;
+    color: #333;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    border-radius: 23px;
+    margin-right: 8px;
+    padding: 9px 18px; /* Increased padding for larger buttons */
+    font-size: 16px; /* Increased font size for larger buttons */
+  }
+  
+  .frequency-goldinvest.selected {
+    background-color: #459a7a;
+    color: #fff;
+  }
+  /* .frequency-goldinvest:hover {
+    background-color:#3c7e63;
+  } */
+
+  .freq-all{
+  margin-right: 10%;
+  }
+  
+ 
+  .last-goldinvest {
+    text-align: center;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 23px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .last-goldinvest img {
+    width: 50px; /* Adjust as needed */
+    margin-bottom: 10px;
+  }
+  
+  .last-goldinvest p {
+    margin-bottom: 10px;
+  }
+
+  
+
   #invest-btn-goldinvest {
     text-align: center;
     align-content: center;
-    width: 20%;
+    width: 18%;
     border:none;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 44px;
     color: #FFFFFF;
     background-color: #459a7a;
