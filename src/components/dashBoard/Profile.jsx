@@ -68,14 +68,15 @@ function Profile() {
   }
   return (
     <div className="app-profile">
-      {/* Section 1: Header */}
-      {/* <header className="header-profile">
-        <div className="profile">
-          <span className='myprofile'>My Profile</span>
-          <img className="profile-icon" src={profileIcon} alt="Profile Icon" />
-        </div>
-        </header>
-        <div className="divider" /> */}
+      
+
+      {/* logic to show user data in profile
+       userData=fetch('userEmail')
+       value={userData.firstname===null? 'this field is required' : userData.firstName}
+
+       */}
+
+
 
 
       {/* Section 2: Main Content */}
