@@ -1,13 +1,7 @@
 .advisor-wrapper-login{
-  width: 1059px;
-  background: transparent;
-  border: 2px solid rgba(160, 151, 151, 0.2);
-  backdrop-filter: blur(9px);
-  /* color: #f72323; */
-  border-radius: 12px;
-  padding: 10px 10px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 1000px;
+  padding: 30px;
+ 
  
 }
 .advisor-view-Button {
@@ -30,6 +24,7 @@
 .tableHeaderCell {
   color: #413d3d!important;
   font-weight:bold !important;
+ 
 }
 
 
@@ -38,6 +33,7 @@ th, td {
   padding: 0px;
   text-align: left;
   border-bottom: 0;
+
 }
 
 /* th {
@@ -58,16 +54,16 @@ th, td {
   border: none;
   color: rgb(244, 241, 241);
   padding: 5px 10px;
-  cursor: pointer; /* Change cursor to pointer to indicate clickable */
-  margin-right: 5px; /* Add some space between the buttons */
-  background-color: green; /* Green background for the tick */
+  cursor: pointer; 
+  margin-right: 5px; 
+  background-color: green; 
   border: none;
   color: white;
   padding: 5px 10px;
-  cursor: pointer; /* Change cursor to pointer to indicate clickable */
-  margin-right: 5px; /* Add some space between the buttons */
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2); /* Add drop shadow */
-  transition: all 0.3s ease; /* Smooth transition for interaction */
+  cursor: pointer; 
+  margin-right: 5px; 
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease; 
 }
 
 .tick:hover {
@@ -85,24 +81,24 @@ th, td {
 /* Responsive adjustments */
 @media screen and (max-width: 1200px) {
   .wrapper-login {
-    width: 100%; /* Make the wrapper take full width */
-    margin: 10px; /* Add some margin */
+    width: 100%;
+    margin: 10px; 
   }
   .tableHeaderCell, th, td {
-    padding: 8px; /* Reduce padding for smaller screens */
-    font-size: 14px; /* Adjust font size */
+    padding: 8px; 
+    font-size: 14px; 
   }
 }
 
 @media screen and (max-width: 768px) {
   .wrapper-login {
-    backdrop-filter: none; /* Optionally disable backdrop filter for performance */
+    backdrop-filter: none; 
   }
   .tick, .cross {
-    padding: 5px; /* Reduce button size */
-    font-size: 12px; /* Reduce font size inside buttons */
+    padding: 5px;
+    font-size: 12px; 
   }
-  /* Consider hiding less important columns on very small screens */
+  
   .hide-on-mobile {
     display: none;
   }

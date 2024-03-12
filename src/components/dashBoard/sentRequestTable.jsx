@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import SideBar from './SideBar';
+import Header from "./Header";
 import './sentRequestTable.css';
  
 import { data } from '../../data/sentRequesttabledata';
  
 function SentRequestTable() {
+    
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle);
+  };
  
     return (
-        <>
+        <div className="grid-container">
+     <Header OpenSidebar={OpenSidebar} />
+    <SideBar 
+         showProfileModal={() => setShowProfile(true)}
+         openSidebarToggle={openSidebarToggle}
+         OpenSidebar={OpenSidebar} 
+    />
             <div className='sent-request-table-wrap'>
                 <div className='sent-request-table-head-wrap'>
                     <ul className='sent-request-table-head-list'>
@@ -42,7 +55,7 @@ function SentRequestTable() {
                     )
                 })}
             </div>
-        </>
+        </div>
     )
 }
  
