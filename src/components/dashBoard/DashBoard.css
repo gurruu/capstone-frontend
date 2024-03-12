@@ -225,6 +225,8 @@ font-weight: bold;
 .card-doughnut{
 box-shadow: none;
 /* background-color: red; */
+height: 230px;
+color: #413d3d;
 
 
 }
@@ -297,7 +299,7 @@ padding-bottom: 5px;
 }
 
 .card-chart-dashboard{
-  width: 350px;
+  width: 300px;
   height: 290px;
   margin-bottom: 10%;
   /* background-color: red; */

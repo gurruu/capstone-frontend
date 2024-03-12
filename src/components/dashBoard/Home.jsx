@@ -5,6 +5,8 @@ import data from '../../data/sourceData.json'
 import DashTable from "../dashboardTable/Dashtable";
 import Profile from "./Profile";
 import NewInvest from "../NewInvestment/NewInvest"
+import PieChart from "../piechart/PieChart";
+
 
 function Home({ investmentData }) {
   Chart.register(ArcElement);
@@ -72,9 +74,9 @@ function Home({ investmentData }) {
       </div>
   
       <div className="dashboard-row-2">
-        <div className=" card-doughnut">
+        <div className="card-doughnut">
           <div className="card-inner-doughnut">
-            <Doughnut
+            {/* <Doughnut
               data={{
                 labels: data.map((val) => val.label),
                 datasets: [
@@ -90,7 +92,8 @@ function Home({ investmentData }) {
                   }
                 ]
               }}
-            />
+            /> */}
+            <PieChart/>
           </div>
         </div>
         <div className="card-chart-dashboard">
