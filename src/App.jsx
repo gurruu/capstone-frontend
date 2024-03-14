@@ -18,6 +18,12 @@ import AccountDetail from "./pages/bankdetailpage/AccountDetail";
 import Investments_Page from "./components/dashBoard/Investments_Page";
 import AdvisorSubscription from "./components/dashBoard/advisorsubscription";
 import SentRequestTable from "./components/dashBoard/sentRequestTable";
+import AdDashBoard from "./components/AdvisorInterface/AdDashBoard";
+import AdClients from "./components/AdvisorInterface/Clients/AdClients";
+import AdRequestPage from "./components/AdvisorInterface/Requests/AdRequestPage";
+import PlansPage from "./components/AdvisorInterface/PlansPage";
+import AdProfilePage from "./components/AdvisorInterface/AdProfilePage";
+
 
 function App() {
   return (
@@ -40,10 +46,14 @@ function App() {
           <Route exact path="/GoldInvest" element={<GoldInvest />} /> 
           <Route exact path="/bankdetails" element={<AccountDetail />} />
           <Route path="/Investments_Page" element={<Investments_Page/>}/>
-
-
           <Route exact path="/sentRequestTable" element={<SentRequestTable />} />
           <Route exact path="/advisorsubscription" element={<AdvisorSubscription />} />
+
+          <Route exact path="/AdDashboard" element={<AdDashBoard/>} />
+          <Route exact path="/AdClients" element={<AdClients/>} />
+          <Route exact path="/adRequestPage" element={<AdRequestPage/>}/>
+          <Route exact path="/PlansPage" element={<PlansPage/>} />
+          <Route exact path="/AdProfilePage" element={<AdProfilePage/>} />
         </Routes>
       </BrowserRouter>
     </>

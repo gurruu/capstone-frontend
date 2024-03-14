@@ -24,8 +24,20 @@ const Navbar = () => {
       </div>
 
 
-
       <div className="navbar-left">
+        
+        <button as="button" class="tab__bJxhD" tabindex="0" cur-idx="0" is-selected=" ">
+          {/* <div onClick={handleClick}>
+            {authToken ? */}
+              <Link to="/AdDashboard" className="nav-item-div">
+                AdDashboard
+              </Link>
+              
+            
+
+          {/* </div> */}
+        </button>
+      
         <button as="button" class="tab__bJxhD" tabindex="0" cur-idx="0" is-selected=" ">
           {/* <div onClick={handleClick}>
             {authToken ? */}
@@ -37,6 +49,7 @@ const Navbar = () => {
 
           {/* </div> */}
         </button>
+
         <button as="button" class="tab__bJxhD" tabindex="0" cur-idx="0" is-selected=" ">
           <div className="nav-item-div">Investment Feed</div>
         </button>
