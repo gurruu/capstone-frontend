@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { Link, useNavigate } from "react-router-dom";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
@@ -11,6 +12,7 @@ export default function Login() {
     email: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
 
   const [isFormDataValid, setIsFormDataValid] = useState(true);
   const navigate = useNavigate();
@@ -81,6 +83,8 @@ export default function Login() {
         throw new Error("Failed to send user data");
       }
 
+     
+
 
       const authToken = credentialResponse.credential;
       const userName = jwtDecode(authToken).given_name;
@@ -136,24 +140,30 @@ export default function Login() {
               <i className="bx bxs-user"></i>
             </div>
             <div className="input-box-login">
-              <input
-                type="password"
-                id="password"
-                placeholder="Password"
-                name="password"
-                onChange={changeHandler}
-                value={currValue.password}
-                required
-                minLength={8}
-              />
-              {!isFormDataValid && (
-                <p className="error-class">
-                  Password must consist a lowercase,uppercase, special character
-                  and a digit.
-                </p>
-              )}
-              <i className="bx bxs-lock-alt"></i>
-            </div>
+  <input type={showPassword ? "text" : "password"}
+    id="password"
+    placeholder="Password"
+    name="password"
+    onChange={changeHandler}
+    value={currValue.password}
+    required
+    minLength={8}
+  />
+  {!isFormDataValid && (
+    <p className="error-class">
+      Password must consist a lowercase, uppercase, special character, and a digit.
+    </p>
+  )}
+  <i className="bx bxs-lock-alt"></i>
+  
+  <button 
+    type="button" 
+    onClick={() => setShowPassword(!showPassword)} 
+    className="toggle-password">
+    {showPassword ? "Hide" : "Show"}
+  </button>
+</div>
+
             <div className="remember-forgot-login">
               <label>
                 <input type="checkbox" />Remember Me
