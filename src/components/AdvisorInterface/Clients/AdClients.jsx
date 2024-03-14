@@ -16,7 +16,8 @@ function AdClients() {
     <AdHeader OpenSidebar={OpenSidebar} />
     <AdSideBar openSidebarToggle={openSidebarToggle}
         OpenSidebar={OpenSidebar}/>
-        <div className=''>
+        <div className="main-container-dashboard">
+     
         <ClientTable></ClientTable>
         </div>
         

@@ -10,11 +10,13 @@ function AdProfilePage() {
       };
   return (
     <>
-    <div className='grid-container profile-page-contaner'>
+    <div className='grid-container '>
     <AdHeader OpenSidebar={OpenSidebar} />
     <AdSideBar openSidebarToggle={openSidebarToggle}
         OpenSidebar={OpenSidebar}/>
+    <div className="main-container-dashboard">
     <AdProfile/>
+    </div>
     </div>
     </>
   )

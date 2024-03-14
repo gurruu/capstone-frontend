@@ -14,7 +14,9 @@ function PlansPage() {
     <AdHeader OpenSidebar={OpenSidebar} />
     <AdSideBar openSidebarToggle={openSidebarToggle}
         OpenSidebar={OpenSidebar}/>
+    <div className="main-container-dashboard">
     <Plans/>
+    </div>
     </div>
     </>
   )
