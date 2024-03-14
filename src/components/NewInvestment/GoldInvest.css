@@ -76,6 +76,15 @@
     left: 26%;
    
   }
+
+  /* .frequency-goldinvest{
+  background-color: #fefbfb;
+  }
+
+  .frequency-goldinvest.selected{
+    background-color:#3c7e63 ;
+  } */
+
   .gold-freq-input button{
     padding: 10px;
     height: 40px;
