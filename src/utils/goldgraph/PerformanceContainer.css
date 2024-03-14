@@ -1,0 +1,58 @@
+.performance-container {
+    padding: 20px;
+    /* background-color: red; */
+    height: 20px;
+  }
+ 
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+ 
+  .price-container,
+  .absolute-container,
+  .cagr-container {
+    flex: 1;
+    font-family:sans-serif;
+    /* min-width: 200px; */
+  }
+ 
+  .buttons-container {
+    display: flex;
+    gap: 10px;
+    font-family: sans-serif;
+  }
+ 
+  .buttons-container button {
+    padding: 5px 5px; /* Adjusted padding to increase button width */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px;
+   
+  }
+ 
+  .buttons-container button:hover {
+    background-color: #e0e0e0;
+  }
+ 
+  .absolute-container p{
+    color:rgb(20, 205, 20);
+    font-weight: 600;
+  }
+ 
+  .price-container p{
+    font-weight: 600;
+  }
+ 
+  .cagr-container p{
+    color:rgb(20, 205, 20);
+    font-weight: 600;
+  }
+ 
+  .buttons-container button:active {
+    background-color: black;
+    color:white;
+  }
