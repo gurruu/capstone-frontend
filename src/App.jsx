@@ -23,6 +23,7 @@ import AdClients from "./components/AdvisorInterface/Clients/AdClients";
 import AdRequestPage from "./components/AdvisorInterface/Requests/AdRequestPage";
 import PlansPage from "./components/AdvisorInterface/PlansPage";
 import AdProfilePage from "./components/AdvisorInterface/AdProfilePage";
+import MutualInvest from "./components/NewInvestment/MutualInvest";
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route exact path="/advisors" element={<AdvisorPage />} />
           <Route exact path="/FDInvest" element={<FDInvest />} />
           <Route exact path="/GoldInvest" element={<GoldInvest />} /> 
+          <Route exact path="/MutualInvest" element={<MutualInvest />} />
           <Route exact path="/bankdetails" element={<AccountDetail />} />
           <Route path="/Investments_Page" element={<Investments_Page/>}/>
           <Route exact path="/sentRequestTable" element={<SentRequestTable />} />
