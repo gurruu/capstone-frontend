@@ -1,5 +1,6 @@
 import React from "react";
 import { Chart, ArcElement } from 'chart.js'
+import { Link, useNavigate } from 'react-router-dom';
 import { Doughnut } from 'react-chartjs-2'
 import data from '../../data/sourceData.json'
 import DashTable from "../dashboardTable/Dashtable";
@@ -69,7 +70,7 @@ function Home({ investmentData }) {
           <div className="card-inner">
             <h3>Request an Investment Plan</h3>
           </div>
-          <button className="dash-start-btn">Start</button>
+          <Link to="/Investment_Plan" className="dash-start-btn" style={{textAlign:"center",padding:"3px"}}>Start</Link>
         </div>
       </div>
   

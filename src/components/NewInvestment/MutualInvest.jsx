@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import './MutualInvest.css'; // Import the CSS file
-import { CenterFocusStrong } from '@mui/icons-material';
 import logo from "./svbtn-logo.svg";
+import { Link } from "react-router-dom";
 
 const dummyMutualFunds = [
   { id: 1, name: 'Equity Fund 1', type: 'Equity', returnPercentage: 10 },
@@ -14,33 +15,29 @@ const dummyMutualFunds = [
 
 const MutualInvest = () => {
   const [investmentType, setInvestmentType] = useState('');
-  const [selectedFundType, setSelectedFundType] = useState('');
+  const [selectedFund, setSelectedFund] = useState(null);
   const [investmentTenure, setInvestmentTenure] = useState(0);
   const [monthlySIP, setMonthlySIP] = useState(0);
   const [lumpsumAmount, setLumpsumAmount] = useState(0);
-  const [selectedFundId, setSelectedFundId] = useState(null);
   const [estimatedReturn, setEstimatedReturn] = useState(0);
 
   const handleTypeChange = (type) => {
     setInvestmentType(type);
-    setSelectedFundType('');
-    setSelectedFundId(null);
+    setSelectedFund(null);
   };
 
-  const handleFundTypeChange = (type) => {
-    setSelectedFundType(type);
+  const handleFundSelection = (fund) => {
+    setSelectedFund(fund);
   };
 
   const calculateEstimatedReturn = () => {
     if (investmentType === 'sip') {
-        const selectedFund = dummyMutualFunds[0]; // Assuming we select the first fund in the list
-        const estimatedReturn = monthlySIP * investmentTenure * 12 * (selectedFund.returnPercentage / 100);
-        setEstimatedReturn(estimatedReturn);
-      } else if (investmentType === 'lumpsum') {
-        const selectedFund = dummyMutualFunds[0]; // Assuming we select the first fund in the list
-        const estimatedReturn = lumpsumAmount * (selectedFund.returnPercentage / 100);
-        setEstimatedReturn(estimatedReturn);
-      }
+      const estimatedReturn = monthlySIP * investmentTenure * 12 * (selectedFund.returnPercentage / 100);
+      setEstimatedReturn(estimatedReturn);
+    } else if (investmentType === 'lumpsum') {
+      const estimatedReturn = lumpsumAmount * (selectedFund.returnPercentage / 100);
+      setEstimatedReturn(estimatedReturn);
+    }
   };
 
   const handleInvestmentTenureChange = (e) => {
@@ -71,7 +68,7 @@ const MutualInvest = () => {
           </thead>
           <tbody>
             {dummyMutualFunds.map(fund => (
-              <tr key={fund.id} onClick={() => setSelectedFundId(fund.id)}>
+              <tr key={fund.id} onClick={() => handleFundSelection(fund)}>
                 <td>{fund.name}</td>
                 <td>{fund.type}</td>
                 <td>{fund.returnPercentage}</td>
@@ -84,9 +81,19 @@ const MutualInvest = () => {
         <h1 className='center'>Calculator</h1>
         <br/>
         <div className="investment-type">
-        <button onClick={() => handleTypeChange('sip')}>SIP</button>
-        <button onClick={() => handleTypeChange('lumpsum')}>Lumpsum</button>
-      </div>
+          <button onClick={() => handleTypeChange('sip')}>SIP</button>
+          <button onClick={() => handleTypeChange('lumpsum')}>Lumpsum</button>
+        </div>
+        {selectedFund && (
+          <div>
+            <label>Name:</label>
+            <input type="text" value={selectedFund.name} readOnly />
+            <label>Type:</label>
+            <input type="text" value={selectedFund.type} readOnly />
+            <label>Return Percentage:</label>
+            <input type="number" value={selectedFund.returnPercentage} readOnly />
+          </div>
+        )}
         {investmentType === 'sip' && (
           <div>
             <label>Investment Tenure:</label>
@@ -94,58 +101,60 @@ const MutualInvest = () => {
             <label>Monthly SIP:</label>
             <input type="number" value={monthlySIP} onChange={handleMonthlySIPChange} />
             <button onClick={calculateEstimatedReturn}>Calculate</button>
-            <p>Estimated Return: {estimatedReturn}</p>
-            <br/>
-            <br/>
-                <div className="last-mutualinvest">
-                <img src={logo} alt="logo" />
-                <p className="mutual-invest-para-amt">
-                    If you had invested{" "}
-                    <strong>
-                    ₹{monthlySIP} 
-                    </strong>{" "}
-                    for <strong>{investmentTenure}</strong> Years, your investments would be worth
-                </p>
-                <p className="mutual-invest-para-amt-2">
-                    <strong>₹{estimatedReturn}</strong>
-                </p>
-                
-                
-                </div>
+        <Link to="/Investment_Plan" className="invest-link">
+          Invest
+        </Link>
+        <p>Estimated Return: {estimatedReturn}</p>
+        
+        <br/>
+        <div className="last-mutualinvest">
+          <img src={logo} alt="logo" />
+          <p className="mutual-invest-para-amt">
+            If you had invested{" "}
+            <strong>
+            ₹{investmentType === 'sip' ? monthlySIP : lumpsumAmount} 
+            </strong>{" "}
+            for <strong>{investmentTenure}</strong> Years, your investments would be worth
+          </p>
+          <p className="mutual-invest-para-amt-2">
+            <strong>₹{estimatedReturn}</strong>
+          </p>
+        </div>
           </div>
+          
         )}
         {investmentType === 'lumpsum' && (
           <div>
             <label>Amount:</label>
             <input type="number" value={lumpsumAmount} onChange={handleLumpsumAmountChange} />
             <button onClick={calculateEstimatedReturn}>Calculate</button>
-            <p>Estimated Return: {estimatedReturn}</p>
-            <br/>
-            <br/>
-                <div className="last-mutualinvest">
-                <img src={logo} alt="logo" />
-                <p className="mutual-invest-para-amt">
-                    If you had invested{" "}
-                    <strong>
-                    ₹{lumpsumAmount} 
-                    </strong>{" "}
-                    , your investments would be worth
-                </p>
-                <p className="mutual-invest-para-amt-2">
-                    <strong>₹{estimatedReturn}</strong>
-                </p>
-                
-                
-                </div>
+        <Link to="/Investment_Plan" className="invest-link">
+          Invest
+        </Link>
+        <p>Estimated Return: {estimatedReturn}</p>
+        <br/>
+        
+        <div className="last-mutualinvest">
+          <img src={logo} alt="logo" />
+          <p className="mutual-invest-para-amt">
+            If you had invested{" "}
+            <strong>
+            ₹{investmentType === 'sip' ? monthlySIP : lumpsumAmount} 
+            </strong>{" "}
+             ,your investments would be worth
+          </p>
+          <p className="mutual-invest-para-amt-2">
+            <strong>₹{estimatedReturn}</strong>
+          </p>
+        </div>
           </div>
         )}
+        
       </div>
     </div>
   );
 };
 
-export default MutualInvest; 
-
-
+export default MutualInvest;
 
 

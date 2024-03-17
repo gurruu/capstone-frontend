@@ -1,6 +1,6 @@
 
 
-  /* General Styles */
+  
 .mf-new-investment {
     display: flex;
     color: #5c5b5b;
@@ -73,7 +73,7 @@
     margin-top: 10px;
   }
   
-  /* Table Styles */
+  
   .mutual-funds-list table {
     width: 100%;
     border-collapse: collapse;
@@ -106,9 +106,8 @@
 
 .last-mutualinvest{
     position: relative;
-    top: 20%;
+    top: 2%;
     left: 10%;
-    /* background-color: #126c46; */
     width: 80%;
     height: 180px;
     display: flex;
@@ -136,3 +135,45 @@
 position: relative;
 top: 14px;
   }
+
+  .invest-btn-mutualinvest {
+    width: 50%;
+    height: 30px;
+    position: absolute;
+    bottom: 6px;
+    background-color: #3c7e63;;;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+   }
+
+   .invest-link {
+    padding: 10px 20px;
+    background-color: #3c7e63;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .invest-link:hover {
+    background-color: #126c46;
+  }
+
+  .calculator input[type="text"] {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 300;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+
+
+
+
