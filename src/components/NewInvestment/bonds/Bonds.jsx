@@ -54,6 +54,7 @@ const Bonds = () => {
   const [error, setError] = useState("");
   const [frequency, setFrequency] = useState("Daily");
   const [period, setPeriod] = useState(1); // Setting initial period to 1 year
+  const [rowBgColor,setRowBgColor]=useState('white')
 
   const handlePeriodChange = (newValue) => {
     if (newValue >= 0.5 && newValue <= 5) {
@@ -62,7 +63,13 @@ const Bonds = () => {
   };
 
   const handleBondSelect =(e)=>{
-    console.log(e)
+    console.log(e.target.closest('tr'))
+    const clickedRow=e.target.closest('tr')
+    const rowData = Array.from(clickedRow.cells).map(cell => cell.textContent);
+    setRowBgColor('#3c7e63')
+
+    // data ready to send to backend server
+    console.log(rowData)
   }
 
   const calculateSum = () => {
@@ -126,12 +133,12 @@ const Bonds = () => {
   };
 
   return (
-    <div className="container-goldinvest">
-      <div className="mutual-funds-list">
+    <div className="container-bonds">
+      <div className="mutual-funds-list bonds-wrap">
         <h2 className="center">Available Bonds</h2>
         <br />
         <table>
-          <thead>
+          <thead className="bonds-th-color">
             <tr>
               <th>Name</th>
               <th>Series</th>
@@ -142,6 +149,7 @@ const Bonds = () => {
               <th>LTP</th>
               <th>MaturityDate</th>
               <th>Risk</th>
+              <th>Invest Here</th>
             </tr>
           </thead>
           <tbody>
@@ -156,107 +164,14 @@ const Bonds = () => {
                 <td>{fund.LTP}</td>
                 <td>{fund.MaturityDate}</td>
                 <td>{fund.Risk}</td>
+                <td><button className="bonds-invest-button">Invest</button></td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <div className="sub-container-goldinvest">
-        <h1
-          className="heading-goldinvest"
-          style={{ textAlign: "center", fontFamily: "Montserrat" }}
-        >
-          Calculate&Decide
-        </h1>
-
-        <div className="input-container-goldinvest-amount">
-          <div className="gold-amt-label">
-            <label htmlFor="amount">Amount</label>
-          </div>
-          <div className="gold-amt-input">
-            <input
-              type="number"
-              id="amount"
-              placeholder="₹"
-              value={amount}
-              onChange={(e) => {
-                const input = e.target.value;
-                const newValue = input >= 0 ? input : amount; // Only update if input is non-negative
-                setAmount(newValue);
-              }}
-            />
-          </div>
-        </div>
-
-        <div className="input-container-goldinvest-amount">
-          <div className="gold-amt-label">
-            <label htmlFor="frequency">Frequency</label>
-          </div>
-          <div className="gold-freq-input">
-            <button
-              className={`frequency-goldinvest ${
-                frequency === "Daily" ? "selected" : ""
-              }`}
-              onClick={() => setFrequency("Daily")}
-            >
-              Daily
-            </button>
-            <button
-              className={`frequency-goldinvest ${
-                frequency === "Monthly" ? "selected" : ""
-              }`}
-              onClick={() => setFrequency("Monthly")}
-            >
-              Monthly
-            </button>
-            <button
-              className={`frequency-goldinvest ${
-                frequency === "One-time" ? "selected" : ""
-              }`}
-              onClick={() => setFrequency("One-time")}
-            >
-              One-time
-            </button>
-          </div>
-        </div>
-
-        <div className="input-container-goldinvest-amount">
-          <div className="gold-amt-label">
-            <label htmlFor="period">Period (years)</label>
-          </div>
-          <div className="gold-amt-input-period">
-            <input
-              className="disabled-input"
-              style={{ width: "150px" }}
-              type="number"
-              id="period"
-              value={period}
-              min="0.5"
-              max="5"
-              step="0.5"
-              onChange={(e) => handlePeriodChange(parseFloat(e.target.value))}
-            />
-          </div>
-        </div>
-
-        <div className="last-goldinvest">
-          <img src={logo} alt="logo" />
-          <p className="gold-invest-para-amt">
-            If you had invested{" "}
-            <strong>
-              ₹{amount} {frequency}
-            </strong>{" "}
-            for <strong>{period}</strong> Years, your investments would be worth
-          </p>
-          <p className="gold-invest-para-amt-2">
-            <strong>₹{calculateSum()}</strong>
-          </p>
-          <button id="invest-btn-goldinvest" onClick={handleInvest}>
-            Invest
-          </button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-        </div>
-      </div>
+      
+      
     </div>
   );
 };

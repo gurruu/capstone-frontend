@@ -25,6 +25,7 @@ import PlansPage from "./components/AdvisorInterface/PlansPage";
 import AdProfilePage from "./components/AdvisorInterface/AdProfilePage";
 import MutualInvest from "./components/NewInvestment/MutualInvest";
 import Bonds from "./components/NewInvestment/bonds/Bonds";
+import Investment_Plan from "./components/dashBoard/Investment_Plan";
 
 function App() {
   return (
