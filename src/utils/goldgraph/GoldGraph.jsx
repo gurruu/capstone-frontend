@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 // import './App.css'
 import './GoldGraph.css'
 import {
@@ -14,17 +14,20 @@ import { format, parseISO, subDays } from "date-fns";
 import PerformanceContainer from './PerformanceContainer';
 
 
-const data = [];
-for (let num = 14; num >= 0; num--) {
-  data.push({
-    date: subDays(new Date(), num).toISOString().substr(0, 10),
-    value: 1 + Math.random(),
-  });
-}
+
  function GoldGraph() {
+  const [days,setDays]=useState(24)
+  const data = [];
+  for (let num = days; num >= 0; num--) {
+    data.push({
+      date: subDays(new Date(), num).toISOString().substr(0, 10),
+      value: 1 + Math.random(),
+    });
+  }
+
   return (
     <>
-    <PerformanceContainer/>
+    <PerformanceContainer setDay={(days)=>setDays(days)}/>
     <ResponsiveContainer className='gold-graph_contain' width="90%" height={400}>
       <AreaChart data={data}>
         <defs>

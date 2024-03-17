@@ -76,23 +76,7 @@ function Home({ investmentData }) {
       <div className="dashboard-row-2">
         <div className="card-doughnut">
           <div className="card-inner-doughnut">
-            {/* <Doughnut
-              data={{
-                labels: data.map((val) => val.label),
-                datasets: [
-                  {
-                    data: data.map((val) => val.value ),
-                    backgroundColor: [
-                      '#BBCFAC',
-                      '#003943',
-                      '#2B5D5C',
-                      '#558375'
-                    ],
-                    hoverOffset: 5
-                  }
-                ]
-              }}
-            /> */}
+            
             <PieChart/>
           </div>
         </div>
