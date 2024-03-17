@@ -30,7 +30,7 @@ const NewInvest = () => {
       <div className="button-group-newInvest">
 
         <div className="button-container-newInvest">
-        <Link to="/FDInvest">
+        <Link to="/bonds">
           <img src={require('./bonds.png')} alt="Bonds" />
           <p style={{ color: '#5e5e5e' }}>Bonds</p>
           </Link>

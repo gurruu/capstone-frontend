@@ -1,7 +1,7 @@
 import React from 'react';
 import './PerformanceContainer.css';
  
-const PerformanceContainer = () => {
+const PerformanceContainer = ({setDay}) => {
   return (
     <>
     
@@ -21,12 +21,12 @@ const PerformanceContainer = () => {
           <p>+10.25%</p>  
         </div>
         <div className="buttons-container">
-          <button>1M</button>
-          <button>3M</button>
-          <button>6M</button>
-          <button>1Y</button>
-          <button>3Y</button>
-          <button>5Y</button>
+          <button onClick={()=>setDay(30)}>1M</button>
+          <button onClick={()=>setDay(90)}>3M</button>
+          <button onClick={()=>setDay(180)}>6M</button>
+          <button onClick={()=>setDay(365)}>1Y</button>
+          <button onClick={()=>setDay(30)}>3Y</button>
+          <button onClick={()=>setDay(30)}>5Y</button>
         </div>
       </div>
     </div>
