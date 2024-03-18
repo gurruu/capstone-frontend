@@ -1,94 +1,146 @@
-/* body {
-  background-color: #faf8f8;
-} */
 
-.container-fdinvest {
-  text-align: left;
-  background-color: #faf8f8;
-  margin-top: 3%;
+
+  /* General Styles */
+  .fd-new-investment {
+    display: flex;
+    color: #5c5b5b;
+    font-family: sans-serif;
+  }
+  
+  .fd-funds-list {
+    width: 70%;
+    padding: 20px;
+  }
+  
+  .fd-calculator {
+    width: 50%;
+    padding: 20px;
+    height: 100vh;
+    background-color: #fefbfb;
+  }
+  
+  .fd-investment-type {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .fd-investment-type button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #3c7e63;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .fd-investment-type button:hover {
+    background-color: #126c46;
+  }
+  
+  .fd-calculator label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .fd-calculator input[type="number"] {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .fd-calculator button {
+    padding: 10px 20px;
+    background-color: #3c7e63;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .fd-calculator button:hover {
+    background-color: #126c46;
+  }
+  
+  .fd-calculator p {
+    margin-top: 10px;
+  }
+  
+  /* Table Styles */
+  .fd-funds-list table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .fd-funds-list th,
+  .fd-funds-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .fd-funds-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .fd-funds-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .fd-funds-list tr:hover {
+    background-color: #ddd;
+  }
+  
+.fd-center{
+    text-align: center;
+    font-size:250%;
 }
 
-.sub-container-fdinvest {
-  text-align: left;
-  margin-left: 30%;
-  margin-top: 3%;
-}
+.last-fixed-deposit{
+    position: relative;
+    top: 20%;
+    left: 10%;
+    /* background-color: #126c46; */
+    width: 80%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #06bc70;;
+    background-color:#fefbfb;
+    border-radius: 5px;
+  }
+  .select-small {
+    font-size: 16px; 
+    padding: 8px; 
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%; 
+    box-sizing: border-box; 
+  }
 
-.heading-fdinvest {
-  color: #5c5b5b;
-  font-family: Montserrat;
-  font-size:300%;
-}
+  .last-fixed-deposit img{
+    position: relative;
+    bottom: 45px;
+    width: 40px;
+    height: 40px;
+  }
 
-.input-container-fdinvest {
-  margin-bottom: 15px;
-}
+  .last-fixed-deposit .fixed-deposit-para-amt{
+    text-align: center;
+    position: absolute;
+  }
 
-
-.input-container-fdinvest label {
-  display: inline-block;
-  font-family: 'Open Sans';
-  color: #000000;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  width: 100px;
-  text-align: left;
-  margin-right: 10px;
-  width: 200px; /* Increased width of labels */
-  font-size: 23px; /* Increased font size of labels */
-}
-
-.input-container-fdinvest input {
-  /* padding: 5px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  width: 200px; */
-
-  padding: 10px; /* Increased padding for better visibility */
-  width: 240px; /* Increased width of input boxes */
-  font-size: 18px; /* Increased font size of input boxes */
-  background: #FFFFFF;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  /* width: calc((100% - 150px) / 3); Adjust width here */
-  display: inline-block;
-  margin-right: 10px; /* Add margin between inputs */
-}
-
-
-
-
-.input-container-fdinvest input:last-child {
-  margin-right: 0; /* Remove margin for last input */
-}
-
-.center-fdinvest {
-  display: flex;
-  justify-content: center;
-}
-
-#invest-btn-fdinvest {
-  text-align: center;
-  align-content: center;
-  width: 20%;
-  border:none;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: #FFFFFF;
-  background-color: #459a7a;
-  padding: 10px 20px;
-  border-radius:30px;
-  margin-top: 5px;
-  cursor: pointer;
-  margin-right: 350px;
-}
-
-#invest-btn-fdinvest:hover {
-  background-color: #3c7e63;
-}
+  .last-fixed-deposit .fixed-deposit-para-amt-2{
+position: relative;
+top: 14px;
+  }

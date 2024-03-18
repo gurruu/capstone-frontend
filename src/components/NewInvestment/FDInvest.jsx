@@ -1,298 +1,230 @@
 // import React, { useState } from 'react';
-// import './FDInvest.css';
+// import './FDInvest.css'; // Import the CSS file
+
+// const dummyFDFunds = [
+//   { id: 1, name: 'FD 1', minAmount: 10000, tenureInMonths: [6, 12, 24], returnPercentage: 5 },
+//   { id: 2, name: 'FD 2', minAmount: 5000, tenureInMonths: [12, 24, 36], returnPercentage: 6 },
+//   { id: 3, name: 'FD 3', minAmount: 20000, tenureInMonths: [12, 24], returnPercentage: 7 },
+//   // Add more FD data as needed
+// ];
 
 // const FDInvest = () => {
-//   const [name, setName] = useState('');
+//   const [selectedFDId, setSelectedFDId] = useState('');
 //   const [amount, setAmount] = useState('');
-//   const [years, setYears] = useState('');
-//   const [months, setMonths] = useState('');
-//   const [days, setDays] = useState('');
-//   const [interestRate, setInterestRate] = useState('');
-//   const [expectedAmount, setExpectedAmount] = useState('');
+//   const [tenure, setTenure] = useState('');
+//   const [estimatedReturn, setEstimatedReturn] = useState(0);
 
-//   const handleInvest = () => {
-//     // investment logic
-//     console.log('Invest button clicked');
+//   const selectedFD = dummyFDFunds.find(fd => fd.id === parseInt(selectedFDId));
+
+//   const calculateEstimatedReturn = () => {
+//     if (!selectedFD || !amount || !tenure) return;
+//     const monthlyRate = selectedFD.returnPercentage / 12 / 100;
+//     const tenureInMonths = tenure;
+//     const futureValue = amount * (Math.pow(1 + monthlyRate, tenureInMonths));
+//     setEstimatedReturn(futureValue);
 //   };
 
 //   return (
-//     <div className="container-fdinvest">
-
-//       <h1 className="heading-fdinvest" style={{ textAlign: 'center',fontFamily:'font-family: Montserrat;' }}>Fixed Deposit</h1>
-//       <div className="sub-container-fdinvest">
-//       <div className="input-container-fdinvest">
-//         <label htmlFor="name">Name</label>
-//         <input
-//           type="text"
-//           id="name"
-//           placeholder="Name"
-//           value={name}
-//           onChange={(e) => setName(e.target.value)}
-//         />
+//     <div className="fd-new-investment">
+//       <h2>Available Fixed Deposits</h2>
+//       <div>
+//         <label>Name:</label>
+//         <select value={selectedFDId} onChange={(e) => setSelectedFDId(e.target.value)}>
+//           <option value="">Select FD</option>
+//           {dummyFDFunds.map(fd => (
+//             <option key={fd.id} value={fd.id}>{fd.name}</option>
+//           ))}
+//         </select>
+//       </div>
+      
+//       <div>
+//         <label>Amount:</label>
+//         <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} min={selectedFD?.minAmount} />
+//       </div>
+      
+//       <div>
+//         <label>Time Period (Months):</label>
+//         <input type="number" value={tenure} onChange={(e) => setTenure(e.target.value)} />
 //       </div>
 
-//       <div className="input-container-fdinvest">
-//         <label htmlFor="amount">Amount</label>
-//         <input
-//           type="text"
-//           id="amount"
-//           placeholder="₹"
-//           value={amount}
-//           onChange={(e) => setAmount(e.target.value.startsWith('₹') ? e.target.value : '₹' + e.target.value)}
-//         />
-//       </div>
+//       {selectedFD && (
+//         <p>Rate of Interest: {selectedFD.returnPercentage}%</p>
+//       )}
+      
+//       <button onClick={calculateEstimatedReturn}>Calculate</button>
 
-//       <div className="input-container-fdinvest">
-//         <label htmlFor="timeframe">Time frame</label>
-//         <input 
-//           type="text"
-//           id="years"
-//           placeholder="Years"
-//           value={years}
-//           onChange={(e) => setYears(e.target.value)}
-//           style={{ width: '72px' }}
-//         />
-//         <input
-//           type="text"
-//           id="months"
-//           placeholder="Months"
-//           value={months}
-//           onChange={(e) => setMonths(e.target.value)}
-//           style={{ width: '80px' }}
-//         />
-//         <input
-//           type="text"
-//           id="days"
-//           placeholder="Days"
-//           value={days}
-//           onChange={(e) => setDays(e.target.value)}
-//           style={{ width: '70px' }}
-//         />
+//       <div>
+//         <p>Estimated Return: ₹{estimatedReturn.toFixed(2)}</p>
 //       </div>
-
-//       <div className="input-container-fdinvest">
-//         <label htmlFor="interestRate">Rate of Interest</label>
-//         <input
-//           type="text"
-//           id="interestRate"
-//           placeholder="In %"
-//           value={interestRate}
-//           onChange={(e) => setInterestRate(e.target.value)}
-//         />
-//       </div>
-
-//       <div className="input-container-fdinvest">
-//         <label htmlFor="expectedAmount">Expected Amount</label>
-//         <input
-//           type="text"
-//           id="expectedAmount"
-//           placeholder="₹"
-//           value={expectedAmount}
-//           onChange={(e) => setExpectedAmount(e.target.value.startsWith('₹') ? e.target.value : '₹' + e.target.value)}
-//         />
-//       </div>
-
-//       <div className="center-fdinvest">
-//       <button id="invest-btn-fdinvest" onClick={handleInvest}>
-//         Invest
-//       </button>
-//       </div>
-//     </div>
 //     </div>
 //   );
 // };
 
 // export default FDInvest;
-import React, { useState } from "react";
-import "./GoldInvest.css";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+
+
+
+
+import React, { useState } from 'react';
+import './FDInvest.css'; // Import the CSS file
+import { CenterFocusStrong } from '@mui/icons-material';
 import logo from "./svbtn-logo.svg";
-import GoldGraph from "../../utils/goldgraph/GoldGraph";
 
-const GoldInvest = () => {
-  const [investmentName, setInvestmentName] = useState("");
-  const [investmentType, setInvestmentType] = useState("");
-  const [amount, setAmount] = useState(0);
-  const [risk, setRisk] = useState("");
-  const [expectedAmount, setExpectedAmount] = useState("");
-  const [error, setError] = useState("");
-  const [frequency, setFrequency] = useState("Daily");
-  const [period, setPeriod] = useState(1); // Setting initial period to 1 year
+const dummyFDFunds = [
+    { id: 1, name: 'SBI', minAmount: 10000, tenureInMonths: [6, 12, 24], returnPercentage: 5 },
+    { id: 2, name: 'HDFC BANK', minAmount: 5000, tenureInMonths: [12, 24, 36], returnPercentage: 6 },
+    { id: 3, name: 'ICIC BANK', minAmount: 20000, tenureInMonths: [12, 24], returnPercentage: 7 },
+   
+  ];
 
-  const handlePeriodChange = (newValue) => {
-    if (newValue >= 0.5 && newValue <= 5) {
-      setPeriod(newValue);
-    }
+// const dummyFDFunds = [
+//   { id: 1, name: 'Equity Fund 1', type: 'Equity', returnPercentage: 10 },
+//   { id: 2, name: 'Equity Fund 2', type: 'Equity', returnPercentage: 12 },
+//   { id: 3, name: 'Debt Fund 1', type: 'Debt', returnPercentage: 8.6 },
+//   { id: 4, name: 'Debt Fund 2', type: 'Debt', returnPercentage: 7.52 },
+//   { id: 5, name: 'Hybrid Fund 1', type: 'Hybrid', returnPercentage: 9 },
+//   // Add more dummy data as needed
+// ];
+
+
+const FDInvest = () => {
+  const [investmentType, setInvestmentType] = useState('');
+  const [selectedFundType, setSelectedFundType] = useState('');
+  const [investmentTenure, setInvestmentTenure] = useState(0);
+  const [monthlySIP, setMonthlySIP] = useState(0);
+  const [lumpsumAmount, setLumpsumAmount] = useState(0);
+  const [selectedFundId, setSelectedFundId] = useState(null);
+  const [estimatedReturn, setEstimatedReturn] = useState(0);
+
+  const [selectedFDId, setSelectedFDId] = useState('');
+  const [amount, setAmount] = useState('');
+  const [tenure, setTenure] = useState('');
+
+  const selectedFD = dummyFDFunds.find(fd => fd.id === parseInt(selectedFDId));
+  const calculateEstimatedReturn = () => {
+    if (!selectedFD || !amount || !tenure) return;
+    const monthlyRate = selectedFD.returnPercentage / 12 / 100;
+    const tenureInMonths = tenure;
+    const futureValue = amount * (Math.pow(1 + monthlyRate, tenureInMonths));
+    setEstimatedReturn(futureValue);
   };
 
-  const calculateSum = () => {
-    let sum = 0;
-    if (amount && frequency && period) {
-      if (frequency === "Daily") {
-        sum = parseFloat(amount) * 365 * parseFloat(period);
-      } else if (frequency === "Monthly") {
-        sum = parseFloat(amount) * 12 * parseFloat(period);
-      } else if (frequency === "One-time") {
-        sum = parseFloat(amount) * parseFloat(period);
-      }
-    }
-    return sum.toFixed(2);
+  const handleTypeChange = (type) => {
+    setInvestmentType(type);
+    setSelectedFundType('');
+    setSelectedFundId(null);
   };
 
-  const notify = () => toast.success("Investment added!");
-  const err = () => toast.error("Could not add investment");
-  const navigate = useNavigate();
-
-  const handleInvest = async () => {
-    const userData = JSON.parse(localStorage.getItem("userData"));
-    let email = null;
-    if (userData) {
-      email = userData.email || userData.nameid;
-    }
-
-    try {
-      const goldInvestment = {
-        InvestmentName: investmentName,
-        InvestmentType: investmentType,
-        Amount: parseFloat(amount),
-        Risk: risk,
-        ExpectedAmount: parseFloat(expectedAmount),
-      };
-
-      const response = await fetch(
-        `https://localhost:7244/api/newInvestment/gold?userEmail=${email}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(goldInvestment),
-        }
-      );
-
-      if (!response.ok) {
-        err();
-        throw new Error("Failed to create gold investment");
-      }
-
-      const data = await response.json();
-      notify();
-      navigate("/dashboard");
-      console.log("success", data.message);
-    } catch (error) {
-      console.error(error); // Log any errors
-      setError("Failed to create gold investment");
-    }
+  const handleFundTypeChange = (type) => {
+    setSelectedFundType(type);
   };
+
+  
+
+  const handleInvestmentTenureChange = (e) => {
+    setInvestmentTenure(parseInt(e.target.value));
+  };
+
+  const handleMonthlySIPChange = (e) => {
+    setMonthlySIP(parseInt(e.target.value));
+  };
+
+ 
 
   return (
-    <div className="container-goldinvest">
-      <div className="gold-graph-container">
-       <GoldGraph/>
-      </div>
-      <div className="sub-container-goldinvest">
-        <h1
-          className="heading-goldinvest"
-          style={{ textAlign: "center", fontFamily: "Montserrat" }}
-        >
-          Calculate&Decide
-        </h1>
+    <div className="fd-new-investment">
+      
+      <div className="fd-funds-list">
+        <h2 className='center'>Available FD'S</h2>
+        <br/>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Return Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {dummyFDFunds.map(fund => (
+              <tr key={fund.id} onClick={() => setSelectedFundId(fund.id)}>
+                <td>{fund.name}</td>
+                <td>{fund.type}</td>
+                <td>{fund.returnPercentage}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div> 
+      <div className="calculator">
+        <h1 className='center'>Calculator</h1>
+        <br/>
+        <div className="investment-type">
         
-        <div className="input-container-goldinvest-amount">
-          
-          <div className="gold-amt-label">
-          <label htmlFor="amount">Amount</label>
-          </div>
-          <div className="gold-amt-input">
-          <input
-            type="number"
-            id="amount"
-            placeholder="₹"
-            value={amount}
-            onChange={(e) => {
-              const input = e.target.value;
-              const newValue = input >= 0 ? input : amount; // Only update if input is non-negative
-              setAmount(newValue);
-            }}
-          />
-          </div>
-        </div>
-
-        <div className="input-container-goldinvest-amount">
-        <div className="gold-amt-label">
-          <label htmlFor="frequency" >
-            Frequency
-          </label>
-          </div>
-          <div className="gold-freq-input" >
-            <button
-              className={`frequency-goldinvest ${
-                frequency === "Daily" ? "selected" : ""
-              }`}
-              onClick={() => setFrequency("Daily")}
-            >
-              Daily
-            </button>
-            <button
-              className={`frequency-goldinvest ${
-                frequency === "Monthly" ? "selected" : ""
-              }`}
-              onClick={() => setFrequency("Monthly")}
-            >
-              Monthly
-            </button>
-            <button
-              className={`frequency-goldinvest ${
-                frequency === "One-time" ? "selected" : ""
-              }`}
-              onClick={() => setFrequency("One-time")}
-            >
-              One-time
-            </button>
-          </div>
-        </div>
-
-        <div className="input-container-goldinvest-amount">
-        <div className="gold-amt-label">
-          <label htmlFor="period">Period (years)</label>
-          </div>
-          <div className="gold-amt-input-period">
-          <input
-            className="disabled-input"
-            style={{ width: "150px" }}
-            type="number"
-            id="period"
-            value={period}
-            min="0.5"
-            max="5"
-            step="0.5"
-            onChange={(e) => handlePeriodChange(parseFloat(e.target.value))}
-          />
-          </div>
-        </div>
-
-        <div className="last-goldinvest">
-          <img src={logo} alt="logo" />
-          <p className="gold-invest-para-amt">
-            If you had invested{" "}
-            <strong>
-              ₹{amount} {frequency}
-            </strong>{" "}
-            for <strong>{period}</strong> Years, your investments would be worth
-          </p>
-          <p className="gold-invest-para-amt-2">
-            <strong>₹{calculateSum()}</strong>
-          </p>
-          <button id="invest-btn-goldinvest" onClick={handleInvest}>
-            Invest
-          </button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-        </div>
       </div>
-    </div>
+        
+       
+        
+      
+      <div>
+        <label>Name:</label>
+        <select value={selectedFDId} onChange={(e) => setSelectedFDId(e.target.value)} className="select-small">
+          <option value="">Select FD</option>
+          {dummyFDFunds.map(fd => (
+            <option key={fd.id} value={fd.id}>{fd.name}</option>
+          ))}
+        </select>
+      </div>
+      
+      <div>
+        <label>Amount:</label>
+        <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} min={selectedFD?.minAmount} />
+      </div>
+      
+      <div>
+        <label>Time Period (Months):</label>
+        <input type="number" value={tenure} onChange={(e) => setTenure(e.target.value)} />
+      </div>
+
+      {selectedFD && (
+        <p>Rate of Interest: {selectedFD.returnPercentage}%</p>
+      )}
+      
+      <button onClick={calculateEstimatedReturn}>Calculate</button>
+
+      <div>
+        <p>Estimated Return: ₹{estimatedReturn.toFixed(2)}</p>
+
+      </div>
+      <div className="last-fixed-deposit">
+                <img src={logo} alt="logo" />
+                <p className="fixed-deposit-para-amt">
+                    If you had invested{" "}
+                    <strong>
+                    ₹{amount} 
+                    </strong>{" "}
+                    for <strong>{tenure}</strong> Years, your investments would be worth
+                </p>
+                <p className="fixed-deposit-para-amt-2">
+                    <strong>₹{estimatedReturn}</strong>
+                </p>
+    
+      
+     
+                
+                
+          </div>
+      </div>
+      </div>
+        
+       
+       
+    
   );
 };
 
-export default GoldInvest;
+export default FDInvest; 
+
+
+
 
