@@ -1,50 +1,64 @@
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Adjust grid-template-columns to include sidebar */
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  height: 100vh; /* Ensure the grid container fills the viewport */
+}
+
+.Header {
+  grid-area: header;
+}
+
+.SideBar {
+  grid-area: sidebar;
+}
+
 .sent-request-table-wrap {
-    width: 100%;
-    height: 100px;
-    padding: 170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 20px;
-    left: 10%;
-    
-    font-weight: bolder;
-    margin-right:200%;
-  }
- 
-  .sent-request-table-head-wrap, .sent-request-table-data-wrap {
-    width: 200%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-  }
- 
-  .sent-request-table-head-wrap {
-    background-color: rgb(182, 177, 177);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    font-weight: bolder;
-  }
- 
-  .sent-request-table-head-list, .sent-request-table-data-wrap ul {
-    display: flex;
-    justify-content: space-between;
-    color: #413d3d;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
- 
-  .sent-request-table-head-list li, .sent-request-table-data-wrap ul li {
-    flex: 1;
-    text-align: center;
-    padding: 0 15px;
-  }
- 
-  .sent-request-table-data-wrap {
-    border-bottom: 1px solid rgb(172, 170, 170);
-  }
- 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-weight: bolder;
+  overflow-x: auto; /* Add overflow-x to enable horizontal scrolling if needed */
+}
+
+.sent-request-table-head-wrap, .sent-request-table-data-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.sent-request-table-head-wrap {
+  background-color: rgb(182, 177, 177);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-weight: bolder;
+}
+
+.sent-request-table-head-list, .sent-request-table-data-wrap ul {
+  display: flex;
+  justify-content: space-between;
+  color: #413d3d;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sent-request-table-head-list li, .sent-request-table-data-wrap ul li {
+  flex: 1;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.sent-request-table-data-wrap {
+  border-bottom: 1px solid rgb(172, 170, 170);
+}

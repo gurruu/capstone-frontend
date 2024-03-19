@@ -1,4 +1,4 @@
-.one{
+/* .one{
     color:#5d987e;
     font-family: Montserrat,sans-serif;
 
@@ -22,4 +22,58 @@
   .ccard{
     margin-top: 80px;
     margin-bottom: 150px; 
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .one {
+    color: #5d987e;
+    font-family: Montserrat, sans-serif;
   }
+  
+  .two {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  .container {
+    margin-top: 50px;
+    font-family: Montserrat, sans-serif;
+    width: 90%; /* Adjusted width */
+    max-width: 1200px; /* Added max-width for larger screens */
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .ccard {
+    margin-top: 80px;
+    margin-bottom: 150px;
+  }
+  
+  /* Adjustments for smaller screens */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 95%; /* Adjusted width for smaller screens */
+    }
+  }
+  
+  /* Adjustments for extra small screens */
+  @media screen and (max-width: 576px) {
+    .container {
+      width: 100%; /* Full width for extra small screens */
+      padding: 0 10px; /* Added padding for extra small screens */
+    }
+  }
+  

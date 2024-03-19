@@ -77,7 +77,7 @@ function Dashtable() {
               <td className='table-content-one'>{val.risk}</td>
               <td className='table-content-one'>{val.type}</td>
               <td className='table-content-one'>
-                {val.advice ? <ThumbUp style={{ color: 'green' }} /> : <ThumbDown style={{ color: 'red' }} />}
+                {!val.advice ? <ThumbUp style={{ color: 'green' }} /> : <ThumbDown style={{ color: 'red' }} />}
               </td>
               <td className='table-content-one'>
                 <button className='withdraw-btn-table-one'>Withdraw</button>
