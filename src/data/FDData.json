@@ -1,0 +1,183 @@
+[
+    {
+      "FixedDepositID": 1,
+      "FDName": "SBI Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.1%",
+      "MinimumInvestment": "Rs. 1,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Low"
+    },
+    {
+      "FixedDepositID": 2,
+      "FDName": "ICICI Bank Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.5%",
+      "MinimumInvestment": "Rs. 10,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Low"
+    },
+    {
+      "FixedDepositID": 3,
+      "FDName": "HDFC Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.75%",
+      "MinimumInvestment": "Rs. 5,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Low"
+    },
+    {
+      "FixedDepositID": 4,
+      "FDName": "Axis Bank Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.25%",
+      "MinimumInvestment": "Rs. 5,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Low"
+    },
+    {
+      "FixedDepositID": 5,
+      "FDName": "Kotak Mahindra Bank Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.6%",
+      "MinimumInvestment": "Rs. 10,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Medium"
+    },
+    {
+      "FixedDepositID": 6,
+      "FDName": "IDFC Bank Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.7%",
+      "MinimumInvestment": "Rs. 10,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Medium"
+    },
+    {
+      "FixedDepositID": 7,
+      "FDName": "Canara Bank Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.4%",
+      "MinimumInvestment": "Rs. 1,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Medium"
+    },
+    {
+      "FixedDepositID": 8,
+      "FDName": "Punjab National Bank Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.3%",
+      "MinimumInvestment": "Rs. 1,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Medium"
+    },
+    {
+      "FixedDepositID": 9,
+      "FDName": "Bank of Baroda Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.25%",
+      "MinimumInvestment": "Rs. 1,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "Medium"
+    },
+    {
+      "FixedDepositID": 10,
+      "FDName": "Indian Bank Fixed Deposit",
+      "Type": "Bank FD",
+      "RateOfInterest": "5.5%",
+      "MinimumInvestment": "Rs. 1,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "7 days to 10 years",
+      "Risk": "High"
+    },
+    {
+      "FixedDepositID": 11,
+      "FDName": "Post Office Time Deposit",
+      "Type": "Government FD",
+      "RateOfInterest": "5.5%",
+      "MinimumInvestment": "Rs. 200",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "1 year to 5 years",
+      "Risk": "Low"
+    },
+    {
+      "FixedDepositID": 12,
+      "FDName": "Senior Citizen Savings Scheme (SCSS)",
+      "Type": "Government FD",
+      "RateOfInterest": "7.4%",
+      "MinimumInvestment": "Rs. 1,000",
+      "MaximumInvestment": "Rs. 15 lakhs",
+      "LockInPeriod": "5 years",
+      "Risk": "Low"
+    },
+    {
+      "FixedDepositID": 13,
+      "FDName": "Kisan Vikas Patra (KVP)",
+      "Type": "Government FD",
+      "RateOfInterest": "6.9%",
+      "MinimumInvestment": "Rs. 1,000",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "2 years 6 months",
+      "Risk": "Low"
+    },
+    {
+      "FixedDepositID": 14,
+      "FDName": "Pradhan Mantri Vaya Vandana Yojana (PMVVY)",
+      "Type": "Government FD",
+      "RateOfInterest": "7.4%",
+      "MinimumInvestment": "Rs. 1,56,658",
+      "MaximumInvestment": "Rs. 15 lakhs",
+      "LockInPeriod": "10 years",
+      "Risk": "Medium"
+    },
+    {
+      "FixedDepositID": 15,
+      "FDName": "National Savings Certificate (NSC)",
+      "Type": "Government FD",
+      "RateOfInterest": "6.8%",
+      "MinimumInvestment": "Rs. 100",
+      "MaximumInvestment": "No Limit",
+      "LockInPeriod": "5 years",
+      "Risk": "Medium"
+    },
+    {
+      "FixedDepositID": 16,
+      "FDName": "Employees' Provident Fund (EPF)",
+      "Type": "Government FD",
+      "RateOfInterest": "8.5%",
+      "MinimumInvestment": "Varies",
+      "MaximumInvestment": "Varies",
+      "LockInPeriod": "Till retirement or withdrawal",
+      "Risk": "High"
+    },
+    {
+      "FixedDepositID": 17,
+      "FDName": "Public Provident Fund (PPF)",
+      "Type": "Government FD",
+      "RateOfInterest": "7.1%",
+      "MinimumInvestment": "Rs. 500",
+      "MaximumInvestment": "Rs. 1.5 lakhs",
+      "LockInPeriod": "15 years",
+      "Risk": "Medium"
+    },
+    {
+      "FixedDepositID": 18,
+      "FDName": "Senior Citizens Saving Scheme (SCSS)",
+      "Type": "Bank FD",
+      "RateOfInterest": "7.4%",
+      "MinimumInvestment": "Rs. 1,000",
+      "MaximumInvestment": "Rs. 15 lakhs",
+      "LockInPeriod": "5 years",
+      "Risk": "Medium"
+    }
+  ]
+  

@@ -35,7 +35,6 @@ function DashBoard() {
       email = userData.email || userData.nameid; 
     }
   
-    console.log('Extracted Email:', email);
   
     if (email) {
       setUserEmail(email);

@@ -1,85 +1,92 @@
 .investment-profile{
-    font-family: 'Open Sans', sans-serif;
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-family: open sans-serif;
-    height: 100%;
-    background-color: hsl(0, 17%, 98%);
-    padding-bottom: 2%;
-    font-weight:600;
-  }
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: open sans-serif;
+  height: 100%;
+  background-color: hsl(0, 17%, 98%);
+  padding-bottom: 2%;
+  font-weight:600;
+}
 
-  .header-profile-investments {
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    padding-bottom: 0;
-    justify-content: space-between;
-    align-items: center;
-    color: #5E5E5E;
-  }
+.header-profile-investments {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  padding-bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  color: #5E5E5E;
+}
 
-  .profile-investments {
-    display: flex; /* Add flex display */
-  }
+.profile-investments {
+  display: flex; /* Add flex display */
+}
 
-  .myprofile-investments{
-    font-size: 25px;
-    width: 250px;
-    display: inline-flex;
-  }
-
-
-  .divider-investments {
-    border-top: 1px solid #5E5E5E;
-    width: 100%; /* Line stretches across the container */
-    margin-top: 5px; /* Add some space between the header and the line */
-  }
+.myprofile-investments{
+  font-size: 25px;
+  width: 250px;
+  display: inline-flex;
+}
 
 
+.divider-investments {
+  border-top: 1px solid #5E5E5E;
+  width: 100%; /* Line stretches across the container */
+  margin-top: 5px; /* Add some space between the header and the line */
+}
 
-  .dash-table-wrap-investments {
-    width: 100%;
-    background-color: white;
-  }
+
+
+.dash-table-wrap-investments {
+  width: 100%;
+  background-color: white;
+}
+
+.table-comp-heading-investments {
+  color: #413d3d;
+  padding: 20px;
+  text-align: center;
+}
+
+.dash-table-investments {
+  width: 100%;
+  border-collapse: collapse; /* Remove default table spacing */
+}
+
+.table-head-row-investments {
+  background-color: rgb(182, 177, 177);
+  color: #413d3d;
+  font-weight: bold;
   
-  .table-comp-heading-investments {
-    color: #413d3d;
-    padding: 20px;
-  }
-  
-  .dash-table-investments {
-    width: 100%;
-    border-collapse: collapse; /* Remove default table spacing */
-  }
-  
-  .table-head-row-investments {
-    background-color: rgb(182, 177, 177);
-    color: #413d3d;
-    font-weight: bold;
-    
-  }
-  
-  .table-content-investments {
-    padding: 15px;
-    text-align: center;
-    color:black;
-  }
-  
-  .table-data-row-investments:nth-child(even) {
-    background-color: #f2f2f2; /* Alternate row background color */
-  }
-  
+}
 
-  
-  .withdraw-btn-table-investments {
-    background: #459a7a;
-    color: white;
-    font-weight: bold;
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 60px;
-  }
-  
+.table-content-investments {
+  padding: 15px;
+  text-align: center;
+  color:black;
+}
+
+.table-data-row-investments:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row background color */
+}
+
+
+
+.withdraw-btn-table-investments {
+  background: #459a7a;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 60px;
+}
+.table-comp-heading-one{
+text-align: center;
+}
+
+.table-data-row-one{
+font-weight: bold;
+}

@@ -66,7 +66,6 @@ export default function SignUp() {
         },
         body: JSON.stringify(currValue)
       });
-      incrementUserIdCounter();
       console.log("register data",response);
       if (!response.ok) {
         errRegistration();

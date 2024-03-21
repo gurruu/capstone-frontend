@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../dashboardTable/Dashtable.css"
+import "./Investment_Page.css";
 import { ThumbUp, ThumbDown, GetApp } from '@mui/icons-material';
 import SideBar from './SideBar';
 import Header from "./Header";
@@ -64,6 +64,7 @@ function Investments_Page() {
          openSidebarToggle={openSidebarToggle}
          OpenSidebar={OpenSidebar} 
     />
+    <div className='main-container-dashboard'>
     <div className='dash-table-wrap-one'>
       <div className='table-comp-heading-one'>
         <h1>Investments</h1>
@@ -101,6 +102,7 @@ function Investments_Page() {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
     </div>
   );

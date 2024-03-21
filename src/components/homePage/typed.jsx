@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./typed.css";
 
 const Typed = ({ modalShowInNav }) => {
+
+  const authToken = localStorage.getItem("jwtToken");
+
+
   return (
     <div className="hero-section">
       <h1 className="hero-title">
@@ -17,16 +21,18 @@ const Typed = ({ modalShowInNav }) => {
           Your Financial Future
         </span>
       </h1>
-      {/* <p className="hero-description">
-        Experience seamless business management with <br />
-        Investo's Comprehensive Suite of Tools.
-      </p> */}
+  
       <div
         onClick={modalShowInNav}
         className="get-started-button-container"
         style={{ marginTop: "90px" }}
       >
-        <Link to="/login" className="get-started-button">Get Started</Link>
+        {authToken ? 
+        
+          <Link to="/dashboard" className="get-started-button">Get Started</Link>
+          :
+          <Link to="/login" className="get-started-button">Get Started</Link>
+        }
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ function AdvisorPage() {
     <SideBar openSidebarToggle={openSidebarToggle}
         OpenSidebar={OpenSidebar}/>
         <div className=''>
-        <AdvisorTable/>
+        <AdvisorTable />
         </div>
         
     </div>

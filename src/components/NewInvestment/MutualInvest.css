@@ -1,0 +1,177 @@
+/* MutualInvest.css */
+
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+  font-family: Montserrat,sans-serif;
+}
+
+.mf-new-investment {
+  display: flex;
+  color: #5c5b5b;
+  font-family: sans-serif;
+}
+
+.mutual-funds-list {
+  width: 70%;
+  padding: 20px;
+}
+
+.calculator {
+  width: 50%;
+  padding: 20px;
+  height: 100vh;
+  background-color: #fefbfb;
+}
+
+.investment-type {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.investment-type button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #3c7e7c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.investment-type button:hover {
+  background-color: #126c46;
+}
+
+.calculator label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.calculator input[type="number"] {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.calculator button {
+  padding: 10px 20px;
+  background-color: #3c7e63;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.calculator button:hover {
+  background-color: #126c46;
+}
+
+.calculator p {
+  margin-top: 10px;
+}
+
+/* Table Styles */
+.mutual-funds-list table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.mutual-funds-list th,
+.mutual-funds-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.mutual-funds-list th {
+  background-color: #f2f2f2;
+}
+
+.mutual-funds-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.mutual-funds-list tr:hover {
+  background-color: #ddd;
+}
+
+/* Add this CSS for selected row */
+.mutual-funds-list tr.selected {
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.center {
+  text-align: center;
+  font-size: 250%;
+}
+
+.last-mutualinvest {
+  position: relative;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #06bc70;;
+  background-color: #fefbfb;
+  border-radius: 5px;
+}
+
+.last-mutualinvest img {
+  position: relative;
+  bottom: 45px;
+  width: 40px;
+  height: 40px;
+}
+
+.last-mutualinvest .mutual-invest-para-amt {
+  text-align: center;
+  position: absolute;
+}
+
+.last-mutualinvest .mutual-invest-para-amt-2 {
+  position: relative;
+  top: 14px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  background-color: #13580a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,65 @@
+.sent-request-table-wrap {
+    width: 100%;
+    height: 100px;
+    padding: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    font-weight: 400;
+    margin-right:200%;
+  }
+ 
+  .sent-request-table-head-wrap, .sent-request-table-data-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+  }
+ 
+  .sent-request-table-head-wrap {
+    background-color: #D9D9D9 !important;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-weight: bolder;
+  }
+ 
+  .sent-request-table-head-list, .sent-request-table-data-wrap ul {
+    display: flex;
+    justify-content: space-between;
+    color: #413d3d;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+ 
+  .sent-request-table-head-list li, .sent-request-table-data-wrap ul li {
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+  }
+ 
+  .sent-request-table-data-wrap {
+    border-bottom: 1px solid rgb(172, 170, 170);
+  }
+ 
+
+.received-plans-button {
+  background-color: #007bff; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 400;
+
+}
+
+.received-plans-button:hover {
+  background-color: #0056b3; 
+}

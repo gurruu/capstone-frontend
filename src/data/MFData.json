@@ -1,0 +1,273 @@
+[
+    {
+      "schemeCode": 100101,
+      "schemeName": "HDFC Equity Fund - Dividend Option",
+      "NAV": 170.50,
+      "date": "2024-03-16",
+      "dividendFrequency": "Quarterly",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100102,
+      "schemeName": "SBI Blue Chip Fund - Regular Plan - Growth",
+      "NAV": 290.75,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100103,
+      "schemeName": "ICICI Prudential Bluechip Fund - Growth",
+      "NAV": 250.40,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100104,
+      "schemeName": "Mirae Asset Emerging Bluechip Fund - Regular Plan - Growth",
+      "NAV": 220.80,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100105,
+      "schemeName": "Axis Bluechip Fund - Direct Plan - Growth",
+      "NAV": 190.60,
+      "date": "2024-03-16",
+      "dividendFrequency": "Annual",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100106,
+      "schemeName": "SBI Magnum Multicap Fund - Growth",
+      "NAV": 280.60,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100107,
+      "schemeName": "DSP Tax Saver Fund - Regular Plan - Growth",
+      "NAV": 180.90,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100108,
+      "schemeName": "Nippon India Tax Saver (ELSS) Fund - Growth",
+      "NAV": 102.70,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Low",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100109,
+      "schemeName": "Aditya Birla Sun Life Liquid Fund - Institutional Dividend",
+      "NAV": 100.50,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Low",
+      "type": "Liquid"
+    },
+    {
+      "schemeCode": 100110,
+      "schemeName": "HDFC Liquid Fund - Growth",
+      "NAV": 102.80,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Low",
+      "type": "Liquid"
+    },
+    {
+      "schemeCode": 100111,
+      "schemeName": "Kotak Standard Multicap Fund - Growth",
+      "NAV": 170.20,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100112,
+      "schemeName": "L&T Emerging Businesses Fund - Growth",
+      "NAV": 130.90,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100113,
+      "schemeName": "Franklin India Smaller Companies Fund - Growth",
+      "NAV": 150.80,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100114,
+      "schemeName": "SBI Small Cap Fund - Regular Plan - Growth",
+      "NAV": 140.70,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100115,
+      "schemeName": "Axis Midcap Fund - Regular Plan - Growth",
+      "NAV": 160.90,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "High",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100116,
+      "schemeName": "HDFC Mid-Cap Opportunities Fund - Growth",
+      "NAV": 140.50,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100117,
+      "schemeName": "DSP Midcap Fund - Regular Plan - Growth",
+      "NAV": 120.70,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100118,
+      "schemeName": "Mirae Asset Tax Saver Fund - Regular Plan - Growth",
+      "NAV": 180.40,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100119,
+      "schemeName": "Tata India Tax Savings Fund - Growth",
+      "NAV": 200.60,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100120,
+      "schemeName": "IDFC Tax Advantage (ELSS) Fund - Growth",
+      "NAV": 140.80,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100121,
+      "schemeName": "Axis Long Term Equity Fund - Growth",
+      "NAV": 190.20,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100122,
+      "schemeName": "Motilal Oswal Long Term Equity Fund - Growth",
+      "NAV": 200.30,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100123,
+      "schemeName": "Canara Robeco Equity Tax Saver Fund - Growth",
+      "NAV": 180.60,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100124,
+      "schemeName": "L&T Tax Advantage Fund - Growth",
+      "NAV": 160.80,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100125,
+      "schemeName": "Quant Tax Plan - Growth",
+      "NAV": 150.70,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100126,
+      "schemeName": "Union Long Term Equity Fund - Growth",
+      "NAV": 140.40,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100127,
+      "schemeName": "Principal Tax Savings Fund - Growth",
+      "NAV": 170.90,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100128,
+      "schemeName": "Navi Tax Saver Fund - Growth",
+      "NAV": 160.70,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100129,
+      "schemeName": "PGIM India Long Term Equity Fund (Tax Saver) - Growth",
+      "NAV": 180.20,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    },
+    {
+      "schemeCode": 100130,
+      "schemeName": "Nippon India Tax Saver (ELSS) Fund - Growth",
+      "NAV": 170.70,
+      "date": "2024-03-16",
+      "dividendFrequency": "N/A",
+      "riskProfile": "Medium",
+      "type": "Equity"
+    }
+  ]
+  

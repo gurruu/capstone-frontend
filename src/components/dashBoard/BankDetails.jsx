@@ -17,12 +17,8 @@ const BankDetails = () => {
   const notify = () => toast.success('Bank Details Updated!');
   const err = () => toast.error('Error updating details!');
   const navigate = useNavigate();
-
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
 
     const userData = JSON.parse(localStorage.getItem("userData"));
     const jwtToken = localStorage.getItem("jwtToken");
@@ -33,22 +29,21 @@ const BankDetails = () => {
     }
 
     try {
-      const bankDetails = {
-        PanNumber: pancardNumber,
-        PanFile: panFile,
-        BankAccNumber: accountNumber,
-        AccHolderName: accountHolderName,
-        BankName: bankName,
-        IFSCCode: ifscCode
-      };
+      const formData = new FormData();
+      formData.append('userEmail', email);
+      formData.append('panNumber', pancardNumber);
+      formData.append('bankAccNumber', accountNumber);
+      formData.append('accHolderName', accountHolderName);
+      formData.append('bankName', bankName);
+      formData.append('ifscCode', ifscCode);
+      formData.append('panFile', panFile); // Add the file to the form data
 
       const response = await fetch(`https://localhost:7244/api/addBankDetails?userEmail=${email}`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${jwtToken}`,
+          'Authorization': `Bearer ${jwtToken}`
         },
-        body: JSON.stringify(bankDetails),
+        body: formData,
       });
 
       if (!response.ok) {

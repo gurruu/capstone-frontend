@@ -12,6 +12,8 @@ export default function Login() {
     password: "",
   });
 
+
+  const [showPassword, setShowPassword] = useState(false);
   const [isFormDataValid, setIsFormDataValid] = useState(true);
   const navigate = useNavigate();
 
@@ -47,27 +49,37 @@ export default function Login() {
       notify();
       const responseData = await response.json();
 
-      
+
       const decodedToken = jwtDecode(responseData.token);
       const userName = responseData.userName;
-      localStorage.setItem('userName',userName);
+      const advisorCredential = responseData.advisorID;
+
+      localStorage.setItem('advisorID', advisorCredential);
+      localStorage.setItem('userName', userName);
       localStorage.setItem('jwtToken', responseData.token);
       localStorage.setItem('userData', JSON.stringify(decodedToken));
 
-      navigate("/dashboard");
+      const role = responseData.roleID;
+      if (role == "1337") {
+        navigate("/AdDashboard");
+      }
+      else if (role == "808") {
+        navigate("/dashboard");
+      }
+
+
     } catch (error) {
       console.error("Login failed:", error);
     }
 
     setIsFormDataValid(true);
-    console.log(currValue);
     setCurrValue({
       email: "",
       password: "",
     });
   };
 
-  const sendUserDataToBackend = async (googleUserData,credentialResponse) => {
+  const sendUserDataToBackend = async (googleUserData, credentialResponse) => {
     try {
       const response = await fetch("https://localhost:7244/api/oauth-login", {
         method: "POST",
@@ -86,41 +98,52 @@ export default function Login() {
       const userName = jwtDecode(authToken).given_name;
       const userData = JSON.stringify(jwtDecode(authToken));
 
-
-      localStorage.setItem('jwtToken',authToken);
-      localStorage.setItem('userName',userName);
+      localStorage.setItem('jwtToken', authToken);
+      localStorage.setItem('userName', userName);
       localStorage.setItem('userData', userData);
 
+      const responseData = await response.json();
+      const role = responseData.roleID;
+      const advisorCredential = responseData.advisorID;
+
+      localStorage.setItem('advisorID', advisorCredential);
+
+
+      if (role == "1337") {
+        navigate("/AdDashboard");
+      }
+      else if (role == "808") {
+        navigate("/dashboard");
+      }
+
       notify();
-      console.log("User data sent successfully");
-      navigate("/dashboard");
     } catch (error) {
       console.error("Error sending user data:", error);
     }
   };
 
-  const handleGoogleOAuthResponse = (googleUserData,credentialResponse) => {
+  const handleGoogleOAuthResponse = (googleUserData, credentialResponse) => {
     const userDataToSend = {
       firstName: googleUserData.name,
       lastName: "",
       email: googleUserData.email,
       password: "",
-      phone:"",
+      phone: "",
       company: "",
-      city:"",
-      state:"",
-      address:"",
+      city: "",
+      state: "",
+      address: "",
     };
 
-    sendUserDataToBackend(userDataToSend,credentialResponse);
+    sendUserDataToBackend(userDataToSend, credentialResponse);
   };
 
   return (
     <div className="box-size-login">
-      
+
       <div className="main-log-container">
-      
-        <div className="wrapper-login">
+
+        <div className="wrapper-login-main">
           <form onSubmit={submitHandler}>
             <h1>Login</h1>
             <div className="input-box-login">
@@ -136,8 +159,7 @@ export default function Login() {
               <i className="bx bxs-user"></i>
             </div>
             <div className="input-box-login">
-              <input
-                type="password"
+              <input type={showPassword ? "text" : "password"}
                 id="password"
                 placeholder="Password"
                 name="password"
@@ -153,6 +175,12 @@ export default function Login() {
                 </p>
               )}
               <i className="bx bxs-lock-alt"></i>
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="toggle-password">
+                {showPassword ? "Hide" : "Show"}
+              </button>
             </div>
             <div className="remember-forgot-login">
               <label>
@@ -160,7 +188,7 @@ export default function Login() {
               </label>
               <a href="#">Forgot Password</a>
             </div>
-            <button type="submit" className="btn-login">              
+            <button type="submit" className="btn-login">
               {" "}
               Login
             </button>
@@ -179,9 +207,8 @@ export default function Login() {
                     const USER_CREDENTIAL = jwtDecode(
                       credentialResponse.credential
                     );
-                    handleGoogleOAuthResponse(USER_CREDENTIAL,credentialResponse);
+                    handleGoogleOAuthResponse(USER_CREDENTIAL, credentialResponse);
                   }
-                  console.log("user logged in successfully");
                 }}
                 onError={() => {
                   console.log("Login Failed");

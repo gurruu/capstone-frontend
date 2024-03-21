@@ -1,17 +1,30 @@
 import React from "react";
-import { Chart, ArcElement } from 'chart.js'
-import { Doughnut } from 'react-chartjs-2'
-import data from '../../data/sourceData.json'
+import {Doughnut } from 'react-chartjs-2'
 import DashTable from "../dashboardTable/Dashtable";
-import Profile from "./Profile";
-import NewInvest from "../NewInvestment/NewInvest"
+import NewInvest from "../NewInvestment/NewInvest";
+import { Chart, ArcElement } from "chart.js";
+import PieChart from "../piechart/PieChart";
+import { Link } from "react-router-dom";
 
 function Home({ investmentData }) {
-  Chart.register(ArcElement);
- const totalPortfolioValue = investmentData.reduce((total, investment) => total + investment.amount, 0);
+  const totalPortfolioValue = investmentData.reduce((total, investment) => total + investment.amount, 0);
+  
+  const investmentSums = investmentData.reduce((acc, investment) => {
+    const { investmentType, amount } = investment;
+    if (!acc[investmentType]) {
+      acc[investmentType] = amount;
+    } else {
+      acc[investmentType] += amount;
+    }
+    return acc;
+  }, {});
 
-  const chartLabels = investmentData.map(investment => investment.investmentName);
+  const uniqueInvestments = Object.keys(investmentSums);
+  Chart.register(ArcElement);
+
+  const chartLabels = investmentData.map(investment => investment.investmentType);
   const chartData = investmentData.map(investment => investment.amount);
+
 
   return (
     <main className="main-container-dashboard">
@@ -52,10 +65,10 @@ function Home({ investmentData }) {
                 </tr>
               </thead>
               <tbody>
-                {investmentData.map((investment, index) => (
+                {uniqueInvestments.map((investment, index) => (
                   <tr key={index}>
-                    <td className="dash-th-left">{investment.investmentName}</td>
-                    <td className="dash-table-right">{investment.amount}</td>
+                    <td className="dash-th-left">{investment}</td>
+                    <td className="dash-table-right">{investmentSums[investment]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -67,40 +80,30 @@ function Home({ investmentData }) {
           <div className="card-inner">
             <h3>Request an Investment Plan</h3>
           </div>
-          <button className="dash-start-btn">Start</button>
+          <Link to="/Investment_Plan" className="dash-start-btn" style={{textAlign:"center",padding:"3px"}}>Start</Link>
         </div>
       </div>
-
-      <div className="main-cards-doughnut">
-        <div className=" card-doughnut">
+  
+      <div className="dashboard-row-2">
+        <div className="card-doughnut">
           <div className="card-inner-doughnut">
-            <Doughnut
-              data={{
-                labels: chartLabels,
-                datasets: [
-                  {
-                    data: chartData,
-                    backgroundColor: [
-                      '#BBCFAC',
-                      '#003943',
-                      '#2B5D5C',
-                      '#558375'
-                    ],
-                    hoverOffset: 5
-                  }
-                ]
-              }}
-            />
+            <PieChart userData={investmentData}/>
           </div>
         </div>
-        <div className="card-doughnut">
-        <div className="card-inner">
+        <div className="card-chart-dashboard">
+        <div className="card-new-invest-inner">
+      {/* <NewInvest></NewInvest> */}
+      <p>Charts here</p>
+      </div>
+      </div>
+        <div className="card-new-invest">
+        <div className="card-new-invest-inner">
       <NewInvest></NewInvest>
       </div>
       </div>
       </div>
       <DashTable />
-    </main>
+      </main>
   );
 }
 

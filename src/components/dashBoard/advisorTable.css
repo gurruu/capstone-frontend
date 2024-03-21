@@ -1,17 +1,15 @@
 .advisor-table-wrap{
   width: 100%;
   height: 100px;
-  /* background-color: white; */
-  padding: 200px;  
-  /* background-color: red; */
+  padding: 250px;  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
+  
   position: relative;
-  top: 20px;
-  left: 15%;
+  top: 40px;
+  /* left: 5%; */
   font-weight: bolder;
 }
 
@@ -20,7 +18,7 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   font-weight: bold;
-  width: 200%;
+  width: 150%;
   /* background-color: red; */
 }
 
@@ -72,7 +70,7 @@
   border-bottom: 1px solid rgb(172, 170, 170);
   padding: 15px;
   /* background-color: blueviolet; */
-  width: 200%;
+  width: 150%;
 }
 
 .advisor-select-btn-table{
@@ -89,3 +87,4 @@
   cursor: pointer;
   margin: auto;
 }
+
